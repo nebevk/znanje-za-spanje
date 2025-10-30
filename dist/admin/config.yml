@@ -1,0 +1,57 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+# Files allow single-instance content (homepage blocks, settings)
+files:
+  - file: "src/_data/site.yml"
+    label: "Splošno (site settings)"
+    name: "site_settings"
+    fields:
+      - { label: "Brand name", name: "brand", widget: "string", default: "Znanje za Spanje" }
+      - { label: "Contact email", name: "email", widget: "string", default: "eva@example.com" }
+      - { label: "Instagram", name: "instagram", widget: "string", default: "@znanje_za_spanje" }
+
+  - file: "src/_data/home.yml"
+    label: "Domov - vsebina"
+    name: "home"
+    fields:
+      - { label: "Hero title", name: "hero_title", widget: "string", default: "Pomagam družinam do mirnih noči in spočite mame." }
+      - { label: "Hero subtitle", name: "hero_subtitle", widget: "text", default: "Svetovanje za spanje dojenčkov in malčkov, prilagojeno vaši družini." }
+      - { label: "Hero image", name: "hero_image", widget: "image", required: false }
+      - { label: "Komu pomagam (paragraph)", name: "komu", widget: "text", default: "Če vaš dojenček težko zaspi..." }
+
+collections:
+  - name: "posts"
+    label: "Blog / Nasveti"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "testimonials"
+    label: "Mnenja mamic"
+    folder: "src/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Quote", name: "quote", widget: "text" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+
+  - name: "services"
+    label: "Storitve"
+    folder: "src/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Full description", name: "body", widget: "markdown", required: false }
