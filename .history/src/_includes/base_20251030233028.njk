@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title | default("Znanje za Spanje") }}</title>
+
+  <!-- Tailwind Play CDN for rapid prototyping (good for small projects) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --brand-1: #F7EFE8; /* soft cream */
+      --brand-2: #F3E6E0; /* blush */
+      --brand-3: #C9B6D8; /* soft lavender accent */
+      --text-1: #2E2A28;  /* dark */
+
+      --radius: 12px;
+    }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text-1); background:var(--brand-1); }
+    .card { background: white; border-radius: var(--radius); box-shadow: 0 6px 20px rgba(46,42,40,0.06); }
+    a.cta { background: linear-gradient(90deg,#DFAEA3,#C9B6D8); color: white; padding: 0.6rem 1.1rem; border-radius: 9999px; font-weight:600; }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <header class="max-w-5xl mx-auto p-6 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center card">
+        <strong class="text-sm">ZS</strong>
+      </div>
+      <div>
+        <a class="text-lg font-semibold" href="/">{{ "Znanje za Spanje" }}</a>
+        <div class="text-xs text-gray-600">Svetovanje za spanje dojenčkov — Eva</div>
+      </div>
+    </div>
+    <nav class="space-x-4 text-sm">
+      <a href="/" class="hover:underline">Domov</a>
+      <a href="/o-meni" class="hover:underline">O meni</a>
+      <a href="/storitve" class="hover:underline">Storitve</a>
+      <a href="/blog" class="hover:underline">Blog</a>
+      <a href="/kontakt" class="cta">Rezerviraj posvet</a>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6">
+    {{ content | safe }}
+  </main>
+
+  <footer class="bg-white mt-12">
+    <div class="max-w-5xl mx-auto p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+      <div>
+        <div class="text-sm font-semibold">Znanje za Spanje</div>
+        <div class="text-xs text-gray-600">© {{ "now" | date("yyyy") }} Eva — Vse pravice pridržane</div>
+      </div>
+      <div class="mt-4 md:mt-0 text-sm">
+        <div>Email: <a href="mailto:eva@example.com" class="text-gray-700">eva@example.com</a></div>
+        <div class="mt-2">Instagram: <a href="#" class="text-gray-700">@znanje_za_spanje</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
