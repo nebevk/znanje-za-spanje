@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kontakt / Rezervacija</title>
+  <title>{{ title | default("Znanje za Spanje") }}</title>
 
   <!-- Tailwind Play CDN for rapid prototyping (good for small projects) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,7 +29,7 @@
         <strong class="text-sm">ZS</strong>
       </div>
       <div>
-        <a class="text-lg font-semibold" href="/">Znanje za Spanje</a>
+        <a class="text-lg font-semibold" href="/">{{ "Znanje za Spanje" }}</a>
         <div class="text-xs text-gray-600">Svetovanje za spanje dojenčkov — Eva</div>
       </div>
     </div>
@@ -43,42 +43,14 @@
   </header>
 
   <main class="max-w-5xl mx-auto p-6">
-    <section class="card p-6">
-  <h1 class="text-2xl font-semibold">Kontakt / Rezervacija</h1>
-  <p class="text-gray-700 mt-2">Izpolnite obrazec in Eva vam bo odgovorila.</p>
-  <form name="contact" method="POST" data-netlify="true" class="mt-4 grid gap-4">
-    <input type="hidden" name="form-name" value="contact" />
-    <label class="block">
-      <div class="text-sm font-medium">Ime</div>
-      <input name="name" required class="mt-1 p-3 w-full card" />
-    </label>
-    <label class="block">
-      <div class="text-sm font-medium">E‑pošta</div>
-      <input type="email" name="email" required class="mt-1 p-3 w-full card" />
-    </label>
-    <label class="block">
-      <div class="text-sm font-medium">Sporočilo / Željen termin</div>
-      <textarea name="message" rows="4" class="mt-1 p-3 w-full card"></textarea>
-    </label>
-<p><button type="submit" class="cta">Pošlji povpraševanje</button></p>
-  </form>
-  <div class="mt-8">
-    <h3 class="font-semibold">Neposredna rezervacija</h3>
-    <p class="text-sm text-gray-700 mt-2">Če želite neposredno rezervirati termin, lahko vstavimo Calendly embed ali povezavo.</p>
-    <!-- Calendly embed placeholder - replace with your Calendly link/script -->
-    <div class="mt-4 card p-6">
-      <div class="text-sm">Calendly embed will appear here. Replace with your Calendly snippet.</div>
-    </div>
-  </div>
-</section>
-
+    {{ content | safe }}
   </main>
 
   <footer class="bg-white mt-12">
     <div class="max-w-5xl mx-auto p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
       <div>
         <div class="text-sm font-semibold">Znanje za Spanje</div>
-        <div class="text-xs text-gray-600">© 2025 Eva — Vse pravice pridržane</div>
+        <div class="text-xs text-gray-600">© {{ page.date | date("yyyy") }} Eva — Vse pravice pridržane</div>
       </div>
       <div class="mt-4 md:mt-0 text-sm">
         <div>Email: <a href="mailto:eva@example.com" class="text-gray-700">eva@example.com</a></div>
