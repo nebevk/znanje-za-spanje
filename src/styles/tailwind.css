@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base design tokens and utility classes */
+:root{
+  --brand-1: #F7EFE8;
+  --brand-2: #F3E6E0;
+  --brand-3: #C9B6D8;
+  --text-1: #2E2A28;
+  --radius: 12px;
+}
+
+body{ color: var(--text-1); background: var(--brand-1); }
+.card{ background: #fff; border-radius: var(--radius); box-shadow: 0 6px 20px rgba(46,42,40,0.06); }
+a.cta{ background: linear-gradient(90deg,#DFAEA3,#C9B6D8); color:#fff; padding: .6rem 1.1rem; border-radius:9999px; font-weight:600; }
+
+
