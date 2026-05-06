@@ -1,0 +1,26 @@
+---
+layout: base
+---
+<article class="section max-w-3xl">
+  <a href="/blog" class="btn btn-ghost btn-sm mb-6">← Nazaj na blog</a>
+
+  <div class="badge badge-secondary mb-4">Blog</div>
+  <h1 class="font-display text-3xl sm:text-4xl md:text-5xl mb-4 leading-tight">{{ title }}</h1>
+  <div class="text-sm text-base-content/60 mb-8">{{ date | readableDate }}</div>
+
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+
+  <div class="divider mt-12"></div>
+
+  <div class="card bg-base-100 shadow-md mt-8">
+    <div class="card-body">
+      <h3 class="card-title font-display">Imate vprašanje?</h3>
+      <p>Pišite mi — z veseljem se pogovoriva o vaši situaciji.</p>
+      <div class="card-actions">
+        <a href="/kontakt" class="btn btn-primary btn-sm">Rezerviraj posvet</a>
+      </div>
+    </div>
+  </div>
+</article>

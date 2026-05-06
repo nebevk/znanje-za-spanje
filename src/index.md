@@ -3,70 +3,123 @@ layout: base
 title: Domov
 ---
 
-<section class="grid md:grid-cols-2 gap-8 items-center">
-  <!-- Hero left text -->
-  <div class="space-y-6">
-    <h1 class="text-4xl font-semibold">Pomagam družinam do mirnih noči in spočite mame.</h1>
-    <p class="text-lg text-gray-700">Svetovanje za spanje dojenčkov in malčkov, prilagojeno vaši družini. Nežno in strokovno—korak za korakom.</p>
-    <div class="flex items-center space-x-4">
-      <a class="cta" href="/kontakt">Rezerviraj posvet</a>
-      <a class="underline" href="/storitve">Poglej storitve</a>
+<section class="hero min-h-[60vh] md:min-h-[70vh] bg-gradient-to-br from-accent via-base-200 to-secondary/40">
+  <div class="hero-content flex-col lg:flex-row gap-8 md:gap-12 max-w-5xl px-4 py-12 md:py-16 w-full">
+    <div class="lg:w-1/2 space-y-6 w-full">
+      <div class="badge badge-secondary badge-lg gap-2">
+        <span class="w-2 h-2 rounded-full bg-secondary-content/50"></span>
+        Svetovanje za spanje
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-semibold leading-tight">{{ home.hero_title }}</h1>
+      <p class="text-base sm:text-lg text-base-content/80">{{ home.hero_subtitle }}</p>
+      <div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4">
+        <a href="/kontakt" class="btn btn-primary btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
+        <a href="/storitve" class="btn btn-ghost btn-lg w-full sm:w-auto">Poglej storitve →</a>
+      </div>
     </div>
-  </div>
-
-  <!-- Hero image -->
-  <div class="card p-4 flex items-center justify-center" style="min-height:260px; background: linear-gradient(180deg,var(--brand-2),var(--brand-1));">
-    <img src="/assets/images/hero-placeholder.jpg" alt="Eva with baby" class="max-h-56 rounded-lg shadow-sm">
-  </div>
-</section>
-
-<!-- Komu pomagam -->
-<section class="mt-12 bg-white card p-6">
-  <h2 class="text-2xl font-semibold">Komu pomagam</h2>
-  <p class="mt-2 text-gray-700">Če vaš dojenček težko zaspi, se ponoči pogosto prebuja ali potrebujete usmeritve pri rutini — skupaj bomo našli način, da bo spanje lažje.</p>
-</section>
-
-<!-- Kako poteka -->
-<section class="mt-8 grid md:grid-cols-4 gap-4">
-  <div class="card p-6 text-center">
-    <div class="text-2xl">1️⃣</div>
-    <div class="font-semibold mt-2">Kratek uvodni pogovor</div>
-  </div>
-  <div class="card p-6 text-center">
-    <div class="text-2xl">2️⃣</div>
-    <div class="font-semibold mt-2">Analiza spanja in rutine</div>
-  </div>
-  <div class="card p-6 text-center">
-    <div class="text-2xl">3️⃣</div>
-    <div class="font-semibold mt-2">Načrt in podpora po meri</div>
-  </div>
-  <div class="card p-6 text-center">
-    <div class="text-2xl">4️⃣</div>
-    <div class="font-semibold mt-2">Mirnejše noči za vso družino</div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section class="mt-8">
-  <h3 class="text-xl font-semibold">Mnenja mamic</h3>
-  <div class="mt-4 grid md:grid-cols-2 gap-4">
-    <div class="card p-4">
-      <div class="font-semibold">“Po dveh tednih sodelovanja naš malček spi v kosu celo noč. Hvala!”</div>
-      <div class="text-sm text-gray-600 mt-2">— Maja, mama 10‑mesečnega fantka</div>
-    </div>
-    <div class="card p-4">
-      <div class="font-semibold">“Nežna in strokovna podpora – počutila sem se slišana.”</div>
-      <div class="text-sm text-gray-600 mt-2">— Ana, mama 8‑mesečne deklice</div>
+    <div class="lg:w-1/2 w-full">
+      <div class="card bg-base-100 shadow-xl lg:rotate-1 lg:hover:rotate-0 transition-transform overflow-hidden">
+        <figure class="aspect-[4/3]">
+          <img src="{{ home.hero_image | default: '/assets/images/hero-placeholder.jpg' }}" alt="Mirne noči za vašo družino" class="w-full h-full object-cover" />
+        </figure>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Mini O meni -->
-<section class="mt-8 card p-6 flex items-center space-x-6">
-  <img src="/assets/images/eva.jpg" alt="Eva" class="w-24 h-24 rounded-full object-cover shadow-sm">
-  <div>
-    <div class="font-semibold">Eva — fizioterapevtka in svetovalka za spanje</div>
-    <p class="text-sm text-gray-700 mt-1">Mame me obiščejo, ko so utrujene in želijo nežne, a učinkovite rešitve.</p>
-    <a href="/o-meni" class="underline text-sm mt-2 inline-block">Preberi več o meni</a>
+<section class="section">
+  <div class="card bg-base-100 shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title font-display text-xl sm:text-2xl">Komu pomagam</h2>
+      <p class="text-base-content/80 text-base sm:text-lg">{{ home.komu }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="text-center mb-10">
+    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Kako poteka</h2>
+    <p class="text-base-content/70 mt-2">Štirje preprosti koraki do mirnejših noči.</p>
+  </div>
+  <ul class="steps steps-vertical lg:steps-horizontal w-full">
+    <li class="step step-primary">
+      <div class="mt-3 max-w-[12rem]">
+        <div class="font-semibold">Uvodni pogovor</div>
+        <div class="text-sm text-base-content/70">Kratek klic za spoznavanje</div>
+      </div>
+    </li>
+    <li class="step step-primary">
+      <div class="mt-3 max-w-[12rem]">
+        <div class="font-semibold">Analiza</div>
+        <div class="text-sm text-base-content/70">Pregled rutine in spanca</div>
+      </div>
+    </li>
+    <li class="step step-primary">
+      <div class="mt-3 max-w-[12rem]">
+        <div class="font-semibold">Načrt po meri</div>
+        <div class="text-sm text-base-content/70">Konkretni koraki za vašo družino</div>
+      </div>
+    </li>
+    <li class="step step-primary">
+      <div class="mt-3 max-w-[12rem]">
+        <div class="font-semibold">Mirnejše noči</div>
+        <div class="text-sm text-base-content/70">Podpora med izvajanjem</div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="section">
+  <div class="text-center mb-10">
+    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Mnenja mamic</h2>
+  </div>
+  <div class="grid md:grid-cols-2 gap-6">
+    {% assign sorted_testimonials = collections.testimonials | sortByOrder %}
+    {% for t in sorted_testimonials %}
+      <div class="card bg-base-100 shadow-sm">
+        <div class="card-body">
+          <div class="text-secondary text-5xl font-display leading-none -mb-2">"</div>
+          <p class="italic text-base-content/90">{{ t.data.quote }}</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="avatar placeholder">
+              <div class="bg-accent text-accent-content rounded-full w-10">
+                <span>{{ t.data.author | slice: 0, 1 }}</span>
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm">{{ t.data.author }}</div>
+              <div class="text-xs text-base-content/60">{{ t.data.role }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="card lg:card-side bg-base-100 shadow-md overflow-hidden">
+    <figure class="lg:w-1/3 bg-accent">
+      <img src="/assets/images/eva.jpg" alt="Eva" class="w-full h-48 sm:h-64 lg:h-full object-cover" />
+    </figure>
+    <div class="card-body lg:w-2/3">
+      <h3 class="card-title font-display text-xl sm:text-2xl">Eva — fizioterapevtka in svetovalka za spanje</h3>
+      <p class="text-base-content/80">Mame me obiščejo, ko so utrujene in želijo nežne, a učinkovite rešitve.</p>
+      <div class="card-actions mt-2">
+        <a href="/o-meni" class="btn btn-secondary btn-sm">Preberi več o meni</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card bg-gradient-to-r from-primary to-secondary text-primary-content shadow-lg">
+    <div class="card-body items-center text-center py-10 md:py-12">
+      <h2 class="card-title font-display text-2xl sm:text-3xl md:text-4xl">Pripravljeni na mirnejše noči?</h2>
+      <p class="text-base sm:text-lg">Začnimo z brezplačnim uvodnim pogovorom.</p>
+      <div class="card-actions mt-4 w-full sm:w-auto">
+        <a href="/kontakt" class="btn btn-neutral btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
+      </div>
+    </div>
   </div>
 </section>

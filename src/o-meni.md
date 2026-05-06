@@ -3,20 +3,157 @@ layout: base
 title: O meni
 ---
 
-<section class="card p-6">
-  <h1 class="text-2xl font-semibold">O meni — Eva</h1>
-  <div class="mt-4 grid md:grid-cols-2 gap-6 items-start">
-    <div>
-      <img src="/assets/images/eva.jpg" alt="Eva" class="rounded-lg shadow-sm w-full object-cover">
+<section class="section">
+  <div class="grid lg:grid-cols-5 gap-10 items-start">
+    <div class="lg:col-span-2">
+      <div class="card bg-base-100 shadow-md overflow-hidden">
+        <figure class="aspect-square">
+          <img src="/assets/images/eva.jpg" alt="Eva" class="w-full h-full object-cover" />
+        </figure>
+      </div>
+      <div class="stats stats-vertical shadow-sm bg-base-100 mt-6 w-full">
+        <div class="stat">
+          <div class="stat-title">Družin podprtih</div>
+          <div class="stat-value text-primary text-3xl">100+</div>
+        </div>
+        <div class="stat">
+          <div class="stat-title">Let izkušenj</div>
+          <div class="stat-value text-secondary text-3xl">5</div>
+        </div>
+        <div class="stat">
+          <div class="stat-title">Pristop</div>
+          <div class="stat-value text-accent-content text-lg">Nežen, brez joka</div>
+        </div>
+      </div>
     </div>
-    <div>
-      <p class="text-gray-700">Sem Eva, fizioterapevtka, ki se specializira v svetovanju za spanje dojenčkov in malčkov. Združujem znanja iz fizioterapije z nežnimi pristopi za izboljšanje spanja, prilagojenimi vsaki družini.</p>
-      <h3 class="mt-4 font-semibold">Zakaj mi lahko zaupate</h3>
-      <ul class="list-disc list-inside text-gray-700 mt-2">
-        <li>Izkušnje s sodelovanjem z mladimi družinami</li>
-        <li>Pristop, ki spoštuje starševski stil in otrokove potrebe</li>
-        <li>Podpora po posvetu</li>
+    <div class="lg:col-span-3 space-y-6">
+      <div class="badge badge-secondary">O meni</div>
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl">Eva</h1>
+      <p class="text-lg text-base-content/80">Sem fizioterapevtka, ki se specializira v svetovanju za spanje dojenčkov in malčkov. Združujem znanja iz fizioterapije z nežnimi pristopi za izboljšanje spanja, prilagojenimi vsaki družini.</p>
+      <p class="text-base-content/80">Po lastnih izkušnjah materinstva sem spoznala, kako močno pomanjkanje spanja vpliva na celotno družino — in kako pomembno je imeti nekoga, ki vas pelje korak za korakom skozi spremembe, ne da bi obsojal vaše dosedanje odločitve.</p>
+
+      <div class="divider"></div>
+
+      <h2 class="font-display text-2xl">Zakaj mi lahko zaupate</h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span>Izkušnje s sodelovanjem z mladimi družinami</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span>Pristop, ki spoštuje starševski stil in otrokove potrebe</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span>Strokovno znanje iz fizioterapije in razvoja dojenčkov</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span>Podpora po posvetu — ne ostanete sami</span>
+        </li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="text-center max-w-2xl mx-auto mb-10">
+    <div class="badge badge-secondary mb-4">Moj pristop</div>
+    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl mb-4">Nežno, postopno, brez stresa</h2>
+    <p class="text-base-content/70">Ne verjamem v metode "pusti ga jokati". Verjamem v predvidljivost, jasne meje in v to, da ima vsak otrok svoj tempo.</p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-2xl mb-2">🌙</div>
+        <h3 class="card-title font-display text-xl">Razumevanje pred ukrepanjem</h3>
+        <p class="text-sm text-base-content/70">Najprej razumemo, zakaj se nekaj dogaja. Šele nato spreminjamo.</p>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-2xl mb-2">🤍</div>
+        <h3 class="card-title font-display text-xl">Spoštovanje vaših vrednot</h3>
+        <p class="text-sm text-base-content/70">Načrt prilagodimo temu, kar se vam zdi prav — ne nasprotno.</p>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-sm">
+      <div class="card-body">
+        <div class="w-12 h-12 rounded-full bg-primary/30 flex items-center justify-center text-2xl mb-2">🌿</div>
+        <h3 class="card-title font-display text-xl">Postopne spremembe</h3>
+        <p class="text-sm text-base-content/70">Majhni, jasni koraki. Brez šokov za otroka in brez stresa za starše.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="text-center max-w-2xl mx-auto mb-10">
+    <div class="badge badge-secondary mb-4">FAQ</div>
+    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Pogosta vprašanja</h2>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-3">
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" checked />
+      <div class="collapse-title font-display text-lg font-semibold">Pri kateri starosti otroka lahko začnemo?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Načeloma od 4. meseca dalje, ko se začnejo vzpostavljati zrelejši cikli spanja. Pri mlajših dojenčkih se pogovarjamo predvsem o realnih pričakovanjih, varnem spancu in podpori starša.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Ali delate na daljavo?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Da, večina posvetov poteka preko videoklica (Zoom ali Google Meet). To je za večino družin tudi udobnejše — pogovor lahko opravimo med otrokovim spancem ali zvečer.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Ali zagovarjate metodo "cry it out"?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Ne. Moj pristop je nežen in postopen. Otroka nikoli ne pustimo samega v stiski. Cilj je, da se otrok nauči zaspati v varnem okolju, kjer ve, da je mama ali oče v bližini.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Koliko časa traja, da vidimo izboljšave?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Večina družin opazi prve spremembe v 7–10 dneh. Stabilnejše rezultate običajno dosežemo v 2–3 tednih, odvisno od izhodišča in doslednosti.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Ali še lahko dojim ponoči?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Seveda. Načrt prilagodim vašemu načinu hranjenja — dojenju, stekleničkam ali kombinaciji. Cilj ni odstavitev, ampak boljši spanec znotraj načina, ki vam ustreza.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Kaj če imamo dvojčke ali več otrok?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Sodelujem tudi z družinami z dvojčki in več otroki. Načrt v takem primeru upošteva dinamiko vse družine in praktične omejitve, ki jih to prinese.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card bg-gradient-to-r from-primary to-secondary text-primary-content shadow-lg">
+    <div class="card-body items-center text-center py-10 md:py-12">
+      <h2 class="card-title font-display text-2xl sm:text-3xl md:text-4xl">Pripravljeni na pogovor?</h2>
+      <p class="text-base sm:text-lg">Začnimo s kratkim, brezplačnim uvodnim klicem.</p>
+      <div class="card-actions mt-4 w-full sm:w-auto">
+        <a href="/kontakt" class="btn btn-neutral btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
+      </div>
     </div>
   </div>
 </section>

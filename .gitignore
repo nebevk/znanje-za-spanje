@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.history/
+.DS_Store
+.env
+.env.*
+*.log
+npm-debug.log*
+.cache/

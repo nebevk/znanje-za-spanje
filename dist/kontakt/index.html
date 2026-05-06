@@ -1,80 +1,125 @@
-
 <!doctype html>
-<html lang="sl">
+<html lang="sl" data-theme="zzs">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kontakt / Rezervacija</title>
-
+  <title>Kontakt — Znanje za Spanje</title>
+  <meta name="description" content="Svetovanje za spanje dojenčkov in malčkov — Eva, Znanje za Spanje." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <style>
-    body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-  </style>
 </head>
-<body class="min-h-screen antialiased">
-  <header class="max-w-5xl mx-auto p-6 flex items-center justify-between">
-    <div class="flex items-center space-x-4">
-      <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center card">
-        <strong class="text-sm">ZS</strong>
-      </div>
-      <div>
-        <a class="text-lg font-semibold" href="/">Znanje za Spanje</a>
-        <div class="text-xs text-gray-600">Svetovanje za spanje dojenčkov — Eva</div>
+<body class="min-h-screen flex flex-col bg-base-200">
+  <header class="navbar min-h-0 py-2 bg-base-100/80 backdrop-blur sticky top-0 z-30 border-b border-base-300">
+    <div class="max-w-5xl mx-auto w-full px-4 flex items-center justify-between gap-2">
+      <a href="/" class="flex items-center gap-3 min-w-0">
+        <div class="avatar placeholder shrink-0">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary text-secondary-content">
+            <span class="text-sm font-bold">ZS</span>
+          </div>
+        </div>
+        <div class="leading-tight min-w-0">
+          <div class="font-display text-base sm:text-lg font-semibold truncate">Znanje za Spanje</div>
+          <div class="hidden sm:block text-xs text-base-content/60 truncate">Svetovanje za spanje dojenčkov — Eva</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="/" class="btn btn-ghost btn-sm rounded-full">Domov</a>
+        <a href="/o-meni" class="btn btn-ghost btn-sm rounded-full">O meni</a>
+        <a href="/storitve" class="btn btn-ghost btn-sm rounded-full">Storitve</a>
+        <a href="/blog" class="btn btn-ghost btn-sm rounded-full">Blog</a>
+        <a href="/kontakt" class="btn btn-primary btn-sm">Rezerviraj posvet</a>
+      </nav>
+      <div class="dropdown dropdown-end md:hidden">
+        <label tabindex="0" class="btn btn-ghost btn-circle" aria-label="Meni">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="/">Domov</a></li>
+          <li><a href="/o-meni">O meni</a></li>
+          <li><a href="/storitve">Storitve</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/kontakt" class="text-primary font-semibold">Rezerviraj posvet</a></li>
+        </ul>
       </div>
     </div>
-    <nav class="space-x-4 text-sm">
-      <a href="/" class="hover:underline">Domov</a>
-      <a href="/o-meni" class="hover:underline">O meni</a>
-      <a href="/storitve" class="hover:underline">Storitve</a>
-      <a href="/blog" class="hover:underline">Blog</a>
-      <a href="/kontakt" class="cta">Rezerviraj posvet</a>
-    </nav>
   </header>
 
-  <main class="max-w-5xl mx-auto p-6">
-    <section class="card p-6">
-  <h1 class="text-2xl font-semibold">Kontakt / Rezervacija</h1>
-  <p class="text-gray-700 mt-2">Izpolnite obrazec in Eva vam bo odgovorila.</p>
-  <form name="contact" method="POST" data-netlify="true" class="mt-4 grid gap-4">
-    <input type="hidden" name="form-name" value="contact" />
-    <label class="block">
-      <div class="text-sm font-medium">Ime</div>
-      <input name="name" required class="mt-1 p-3 w-full card" />
-    </label>
-    <label class="block">
-      <div class="text-sm font-medium">E‑pošta</div>
-      <input type="email" name="email" required class="mt-1 p-3 w-full card" />
-    </label>
-    <label class="block">
-      <div class="text-sm font-medium">Sporočilo / Željen termin</div>
-      <textarea name="message" rows="4" class="mt-1 p-3 w-full card"></textarea>
-    </label>
-<p><button type="submit" class="cta">Pošlji povpraševanje</button></p>
-  </form>
-  <div class="mt-8">
-    <h3 class="font-semibold">Neposredna rezervacija</h3>
-    <p class="text-sm text-gray-700 mt-2">Če želite neposredno rezervirati termin, lahko vstavimo Calendly embed ali povezavo.</p>
-    <!-- Calendly embed placeholder - replace with your Calendly link/script -->
-    <div class="mt-4 card p-6">
-      <div class="text-sm">Calendly embed will appear here. Replace with your Calendly snippet.</div>
-    </div>
+  <main class="flex-1">
+    <section class="section">
+  <div class="grid lg:grid-cols-2 gap-10">
+    <div>
+      <div class="badge badge-secondary mb-4">Kontakt</div>
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl mb-4">Pišite mi</h1>
+      <p class="text-base-content/70 mb-8 text-base sm:text-lg">Izpolnite obrazec in odgovorila vam bom v najkrajšem možnem času.</p>
+<p><div class="card bg-base-100 shadow-md">
+<div class="card-body">
+<form name="contact" method="POST" data-netlify="true" class="space-y-3">
+<input type="hidden" name="form-name" value="contact" />
+<label class="form-control w-full">
+<div class="label"><span class="label-text font-medium">Ime</span></div>
+<input type="text" name="name" required class="input input-bordered w-full" />
+</label>
+<label class="form-control w-full">
+<div class="label"><span class="label-text font-medium">E-pošta</span></div>
+<input type="email" name="email" required class="input input-bordered w-full" />
+</label>
+<label class="form-control w-full">
+<div class="label"><span class="label-text font-medium">Sporočilo / željen termin</span></div>
+<textarea name="message" rows="5" class="textarea textarea-bordered w-full" placeholder="Povejte mi nekaj o vaši situaciji..."></textarea>
+</label>
+<button type="submit" class="btn btn-primary btn-block mt-2">Pošlji povpraševanje</button>
+</form>
+</div>
+</div>
+</div></p>
+<p><div class="space-y-6">
+<div class="card bg-base-100 shadow-md">
+<div class="card-body">
+<h2 class="card-title font-display">Neposredna rezervacija</h2>
+<p class="text-sm text-base-content/70">Če želite neposredno rezervirati termin, lahko vstavimo Calendly embed ali povezavo.</p>
+<div class="mockup-window border border-base-300 mt-4">
+<div class="px-6 py-12 text-center bg-base-200">
+<p class="text-sm text-base-content/60">Calendly embed bo prikazan tukaj.</p>
+</div>
+</div>
+</div>
+</div></p>
+<p><div class="card bg-base-100 shadow-md">
+<div class="card-body">
+<h2 class="card-title font-display">Kontaktni podatki</h2>
+<ul class="space-y-3 text-sm">
+<li class="flex items-center gap-3">
+<span class="badge badge-secondary">@</span>
+<a href="mailto:" class="link link-hover"></a>
+</li>
+<li class="flex items-center gap-3">
+<span class="badge badge-secondary">IG</span>
+<span></span>
+</li>
+</ul>
+</div>
+</div>
+</div></p>
   </div>
 </section>
 
   </main>
 
-  <footer class="bg-white mt-12">
-    <div class="max-w-5xl mx-auto p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
-      <div>
-        <div class="text-sm font-semibold">Znanje za Spanje</div>
-        <div class="text-xs text-gray-600">© 2025 Eva — Vse pravice pridržane</div>
+  <footer class="footer footer-center bg-neutral text-neutral-content p-10 mt-12">
+    <aside>
+      <div class="font-display text-xl font-semibold">Znanje za Spanje</div>
+      <p class="text-sm opacity-80">© 2025 Eva — Vse pravice pridržane</p>
+    </aside>
+    <nav>
+      <div class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm items-center">
+        <a href="mailto:" class="link link-hover break-all"></a>
+        <span class="opacity-50 hidden sm:inline">·</span>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" class="link link-hover"></a>
       </div>
-      <div class="mt-4 md:mt-0 text-sm">
-        <div>Email: <a href="mailto:eva@example.com" class="text-gray-700">eva@example.com</a></div>
-        <div class="mt-2">Instagram: <a href="#" class="text-gray-700">@znanje_za_spanje</a></div>
-      </div>
-    </div>
+    </nav>
   </footer>
 </body>
 </html>

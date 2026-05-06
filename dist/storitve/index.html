@@ -1,74 +1,84 @@
-
 <!doctype html>
-<html lang="sl">
+<html lang="sl" data-theme="zzs">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Storitve</title>
-
+  <title>Storitve — Znanje za Spanje</title>
+  <meta name="description" content="Svetovanje za spanje dojenčkov in malčkov — Eva, Znanje za Spanje." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <style>
-    body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-  </style>
 </head>
-<body class="min-h-screen antialiased">
-  <header class="max-w-5xl mx-auto p-6 flex items-center justify-between">
-    <div class="flex items-center space-x-4">
-      <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center card">
-        <strong class="text-sm">ZS</strong>
-      </div>
-      <div>
-        <a class="text-lg font-semibold" href="/">Znanje za Spanje</a>
-        <div class="text-xs text-gray-600">Svetovanje za spanje dojenčkov — Eva</div>
+<body class="min-h-screen flex flex-col bg-base-200">
+  <header class="navbar min-h-0 py-2 bg-base-100/80 backdrop-blur sticky top-0 z-30 border-b border-base-300">
+    <div class="max-w-5xl mx-auto w-full px-4 flex items-center justify-between gap-2">
+      <a href="/" class="flex items-center gap-3 min-w-0">
+        <div class="avatar placeholder shrink-0">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary text-secondary-content">
+            <span class="text-sm font-bold">ZS</span>
+          </div>
+        </div>
+        <div class="leading-tight min-w-0">
+          <div class="font-display text-base sm:text-lg font-semibold truncate">Znanje za Spanje</div>
+          <div class="hidden sm:block text-xs text-base-content/60 truncate">Svetovanje za spanje dojenčkov — Eva</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="/" class="btn btn-ghost btn-sm rounded-full">Domov</a>
+        <a href="/o-meni" class="btn btn-ghost btn-sm rounded-full">O meni</a>
+        <a href="/storitve" class="btn btn-ghost btn-sm rounded-full">Storitve</a>
+        <a href="/blog" class="btn btn-ghost btn-sm rounded-full">Blog</a>
+        <a href="/kontakt" class="btn btn-primary btn-sm">Rezerviraj posvet</a>
+      </nav>
+      <div class="dropdown dropdown-end md:hidden">
+        <label tabindex="0" class="btn btn-ghost btn-circle" aria-label="Meni">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="/">Domov</a></li>
+          <li><a href="/o-meni">O meni</a></li>
+          <li><a href="/storitve">Storitve</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/kontakt" class="text-primary font-semibold">Rezerviraj posvet</a></li>
+        </ul>
       </div>
     </div>
-    <nav class="space-x-4 text-sm">
-      <a href="/" class="hover:underline">Domov</a>
-      <a href="/o-meni" class="hover:underline">O meni</a>
-      <a href="/storitve" class="hover:underline">Storitve</a>
-      <a href="/blog" class="hover:underline">Blog</a>
-      <a href="/kontakt" class="cta">Rezerviraj posvet</a>
-    </nav>
   </header>
 
-  <main class="max-w-5xl mx-auto p-6">
-    <section class="card p-6">
-  <h1 class="text-2xl font-semibold">Storitve</h1>
-  <p class="text-gray-700 mt-2">Ponujam prilagojene programe, ki podpirajo vas in vašega otroka.</p>
-  <div class="mt-6 grid md:grid-cols-3 gap-4">
-    <div class="card p-6">
-      <h3 class="font-semibold">Posvet (osnovni)</h3>
-      <p class="text-sm text-gray-700 mt-2">Kratek uvodni pogovor in hitri nasveti za izboljšanje rutine.</p>
-    </div>
-    <div class="card p-6">
-      <h3 class="font-semibold">Načrt spanja po meri</h3>
-      <p class="text-sm text-gray-700 mt-2">Podroben načrt, prilagojen navadam in potrebam vaše družine.</p>
-    </div>
-    <div class="card p-6">
-      <h3 class="font-semibold">Spremljanje / podpora po posvetu</h3>
-      <p class="text-sm text-gray-700 mt-2">Kratka podpora in prilagoditve po začetnem načrtu.</p>
-    </div>
+  <main class="flex-1">
+    <section class="section">
+  <div class="text-center max-w-2xl mx-auto mb-12">
+    <div class="badge badge-secondary mb-4">Storitve</div>
+    <h1 class="font-display text-3xl sm:text-4xl md:text-5xl mb-4">Programi po meri</h1>
+    <p class="text-base-content/70 text-base sm:text-lg">Ponujam prilagojene programe, ki podpirajo vas in vašega otroka.</p>
   </div>
-  <div class="mt-6">
-    <h3 class="font-semibold">Darilni boni</h3>
-    <p class="text-sm text-gray-700 mt-2">Darilni boni so na voljo — kontaktirajte me za podrobnosti.</p>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+  </div>
+  <div class="alert bg-secondary/30 border border-secondary/40 mt-12">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 w-6 h-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" /></svg>
+    <div>
+      <h3 class="font-semibold">Darilni boni</h3>
+      <p class="text-sm">Darilni boni so na voljo — kontaktirajte me za podrobnosti.</p>
+    </div>
   </div>
 </section>
 
   </main>
 
-  <footer class="bg-white mt-12">
-    <div class="max-w-5xl mx-auto p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
-      <div>
-        <div class="text-sm font-semibold">Znanje za Spanje</div>
-        <div class="text-xs text-gray-600">© 2025 Eva — Vse pravice pridržane</div>
+  <footer class="footer footer-center bg-neutral text-neutral-content p-10 mt-12">
+    <aside>
+      <div class="font-display text-xl font-semibold">Znanje za Spanje</div>
+      <p class="text-sm opacity-80">© 2025 Eva — Vse pravice pridržane</p>
+    </aside>
+    <nav>
+      <div class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm items-center">
+        <a href="mailto:" class="link link-hover break-all"></a>
+        <span class="opacity-50 hidden sm:inline">·</span>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" class="link link-hover"></a>
       </div>
-      <div class="mt-4 md:mt-0 text-sm">
-        <div>Email: <a href="mailto:eva@example.com" class="text-gray-700">eva@example.com</a></div>
-        <div class="mt-2">Instagram: <a href="#" class="text-gray-700">@znanje_za_spanje</a></div>
-      </div>
-    </div>
+    </nav>
   </footer>
 </body>
 </html>

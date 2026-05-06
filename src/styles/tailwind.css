@@ -2,17 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom base design tokens and utility classes */
-:root{
-  --brand-1: #F7EFE8;
-  --brand-2: #F3E6E0;
-  --brand-3: #C9B6D8;
-  --text-1: #2E2A28;
-  --radius: 12px;
+@layer base {
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    @apply font-sans antialiased;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+  /* Avoid iOS auto-zoom on input focus (triggered when font-size < 16px) */
+  input, textarea, select {
+    font-size: 16px;
+  }
 }
 
-body{ color: var(--text-1); background: var(--brand-1); }
-.card{ background: #fff; border-radius: var(--radius); box-shadow: 0 6px 20px rgba(46,42,40,0.06); }
-a.cta{ background: linear-gradient(90deg,#DFAEA3,#C9B6D8); color:#fff; padding: .6rem 1.1rem; border-radius:9999px; font-weight:600; }
+@layer components {
+  .section {
+    @apply max-w-5xl mx-auto px-4 md:px-6 py-10 md:py-16;
+  }
 
-
+  .post-body h2 { @apply font-display text-2xl md:text-3xl mt-10 mb-4; }
+  .post-body h3 { @apply font-display text-xl md:text-2xl mt-8 mb-3; }
+  .post-body p  { @apply mb-4 leading-relaxed text-base-content/85; }
+  .post-body ul { @apply list-disc pl-6 mb-4 space-y-1; }
+  .post-body ol { @apply list-decimal pl-6 mb-4 space-y-1; }
+  .post-body a  { @apply link link-primary; }
+  .post-body blockquote { @apply border-l-4 border-primary/40 pl-4 italic my-6 text-base-content/80; }
+  .post-body img { @apply rounded-box shadow-sm my-6 max-w-full h-auto; }
+}

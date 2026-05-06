@@ -1,7 +1,6 @@
-
 backend:
   name: git-gateway
-  branch: main
+  branch: master
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
@@ -31,6 +30,7 @@ collections:
     folder: "src/posts"
     create: true
     slug: "{{slug}}"
+    filter: { field: "title" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
@@ -41,9 +41,12 @@ collections:
     folder: "src/testimonials"
     create: true
     slug: "{{slug}}"
+    filter: { field: "quote" }
     fields:
       - { label: "Quote", name: "quote", widget: "text" }
       - { label: "Author", name: "author", widget: "string" }
+      - { label: "Role", name: "role", widget: "string", required: false, hint: "npr. 'mama 10-mesečnega fantka'" }
+      - { label: "Order", name: "order", widget: "number", required: false, default: 0, hint: "Manjše število = višje na strani" }
       - { label: "Photo", name: "photo", widget: "image", required: false }
 
   - name: "services"
@@ -51,7 +54,11 @@ collections:
     folder: "src/services"
     create: true
     slug: "{{slug}}"
+    filter: { field: "title" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Badge", name: "badge", widget: "string", required: false, hint: "npr. 'Osnovni', 'Najbolj priljubljeno'" }
+      - { label: "Featured", name: "featured", widget: "boolean", required: false, default: false, hint: "Označi kot izpostavljeno (večja kartica, drugačna barva)" }
+      - { label: "Order", name: "order", widget: "number", required: false, default: 0, hint: "Manjše število = bolj levo" }
       - { label: "Full description", name: "body", widget: "markdown", required: false }
