@@ -2,11 +2,11 @@
   "name": "eleventy-decap-site",
   "version": "1.0.0",
   "scripts": {
-    "dev:eleventy": "npx @11ty/eleventy --serve",
-    "dev:css": "npx tailwindcss -c tailwind.config.js -i src/styles/tailwind.css -o assets/css/main.css --watch",
+    "dev:eleventy": "node node_modules/@11ty/eleventy/cmd.js --serve",
+    "dev:css": "node node_modules/tailwindcss/lib/cli.js -c tailwind.config.js -i src/styles/tailwind.css -o assets/css/main.css --watch",
     "start": "npm-run-all -p dev:*",
-    "build:css": "npx tailwindcss -c tailwind.config.js -i src/styles/tailwind.css -o assets/css/main.css --minify",
-    "build": "npm run build:css && npx @11ty/eleventy"
+    "build:css": "node node_modules/tailwindcss/lib/cli.js -c tailwind.config.js -i src/styles/tailwind.css -o assets/css/main.css --minify",
+    "build": "npm run build:css && node node_modules/@11ty/eleventy/cmd.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
