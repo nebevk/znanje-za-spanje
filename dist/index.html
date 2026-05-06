@@ -15,15 +15,12 @@
   <header class="navbar min-h-0 py-2 bg-base-100/80 backdrop-blur sticky top-0 z-30 border-b border-base-300">
     <div class="max-w-5xl mx-auto w-full px-4 flex items-center justify-between gap-2">
       <a href="/" class="flex items-center gap-3 min-w-0">
-        <div class="avatar placeholder shrink-0">
-          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary text-secondary-content">
-            <span class="text-sm font-bold">ZS</span>
+        <div class="avatar shrink-0">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full">
+            <img src="/assets/images/logo.png" alt="Logo Znanje za Spanje" width="200" height="200" />
           </div>
         </div>
-        <div class="leading-tight min-w-0">
-          <div class="font-display text-base sm:text-lg font-semibold truncate">Znanje za Spanje</div>
-          <div class="hidden sm:block text-xs text-base-content/60 truncate">Svetovanje za spanje dojenčkov — Eva</div>
-        </div>
+        <span class="font-display text-lg sm:text-xl md:text-2xl font-semibold truncate">Znanje za Spanje</span>
       </a>
       <nav class="hidden md:flex items-center gap-1">
         <a href="/" class="btn btn-ghost btn-sm rounded-full">Domov</a>
@@ -48,29 +45,25 @@
   </header>
 
   <main class="flex-1">
-    <section class="hero min-h-[60vh] md:min-h-[70vh] bg-gradient-to-br from-accent via-base-200 to-secondary/40">
-  <div class="hero-content flex-col lg:flex-row gap-8 md:gap-12 max-w-5xl px-4 py-12 md:py-16 w-full">
-    <div class="lg:w-1/2 space-y-6 w-full">
-      <div class="badge badge-secondary badge-lg gap-2">
+    
+<section class="hero relative min-h-[75vh] md:min-h-[85vh] bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/images/tomoko-uji-kxvn1ogpTtE-unsplash.jpg');">
+  <div class="absolute inset-0 bg-gradient-to-b from-base-200/30 via-base-200/55 to-base-200/85"></div>
+  <div class="hero-content relative z-10 text-center px-4 py-16 md:py-20">
+    <div class="max-w-3xl space-y-6">
+      <div class="badge badge-secondary badge-lg gap-2 shadow-sm">
         <span class="w-2 h-2 rounded-full bg-secondary-content/50"></span>
         Svetovanje za spanje
       </div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-semibold leading-tight"></h1>
-      <p class="text-base sm:text-lg text-base-content/80"></p>
-      <div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4">
-        <a href="/kontakt" class="btn btn-primary btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
-        <a href="/storitve" class="btn btn-ghost btn-lg w-full sm:w-auto">Poglej storitve →</a>
-      </div>
-    </div>
-    <div class="lg:w-1/2 w-full">
-      <div class="card bg-base-100 shadow-xl lg:rotate-1 lg:hover:rotate-0 transition-transform overflow-hidden">
-        <figure class="aspect-[4/3]">
-          <img src="/assets/images/hero-placeholder.jpg" alt="Mirne noči za vašo družino" class="w-full h-full object-cover" />
-        </figure>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold leading-tight text-base-content"></h1>
+      <p class="text-base sm:text-lg text-base-content/85 max-w-2xl mx-auto"></p>
+      <div class="flex flex-col sm:flex-row justify-center sm:items-center gap-3 sm:gap-4 pt-2">
+        <a href="/kontakt" class="btn btn-primary btn-lg w-full sm:w-auto shadow-md">Rezerviraj posvet</a>
+        <a href="/storitve" class="btn btn-ghost btn-lg w-full sm:w-auto bg-base-100/60 hover:bg-base-100/80 backdrop-blur-sm">Poglej storitve →</a>
       </div>
     </div>
   </div>
 </section>
+
 <section class="section">
   <div class="card bg-base-100 shadow-sm">
     <div class="card-body">
@@ -79,6 +72,7 @@
     </div>
   </div>
 </section>
+
 <section class="section">
   <div class="text-center mb-10">
     <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Kako poteka</h2>
@@ -111,85 +105,93 @@
     </li>
   </ul>
 </section>
+
 <section class="section">
   <div class="text-center mb-10">
     <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Mnenja mamic</h2>
   </div>
   <div class="grid md:grid-cols-2 gap-6">
-<p><div class="card bg-base-100 shadow-sm">
-<div class="card-body">
-<div class="text-secondary text-5xl font-display leading-none -mb-2">&quot;</div>
-<p class="italic text-base-content/90">Po dveh tednih sodelovanja naš malček spi v kosu celo noč. Najbolj sem hvaležna za nežen pristop — nič joka, samo postopne spremembe.</p>
-<div class="flex items-center gap-3 mt-4">
-<div class="avatar placeholder">
-<div class="bg-accent text-accent-content rounded-full w-10">
-<span>M</span>
-</div>
-</div>
-<div>
-<div class="font-semibold text-sm">Maja</div>
-<div class="text-xs text-base-content/60">mama 10-mesečnega fantka</div>
-</div>
-</div>
-</div>
-</div></p>
-<p><div class="card bg-base-100 shadow-sm">
-<div class="card-body">
-<div class="text-secondary text-5xl font-display leading-none -mb-2">&quot;</div>
-<p class="italic text-base-content/90">Nežna in strokovna podpora — počutila sem se slišana in razumljena. Eva je razumela našo situacijo in nam pripravila načrt, ki je deloval.</p>
-<div class="flex items-center gap-3 mt-4">
-<div class="avatar placeholder">
-<div class="bg-accent text-accent-content rounded-full w-10">
-<span>A</span>
-</div>
-</div>
-<div>
-<div class="font-semibold text-sm">Ana</div>
-<div class="text-xs text-base-content/60">mama 8-mesečne deklice</div>
-</div>
-</div>
-</div>
-</div></p>
-<p><div class="card bg-base-100 shadow-sm">
-<div class="card-body">
-<div class="text-secondary text-5xl font-display leading-none -mb-2">&quot;</div>
-<p class="italic text-base-content/90">Mislila sem, da je nemogoče, da bi naša 18-mesečna hči zaspala brez ur dolgega zibanja. Po treh tednih je zaspala sama, mirno in brez stresa.</p>
-<div class="flex items-center gap-3 mt-4">
-<div class="avatar placeholder">
-<div class="bg-accent text-accent-content rounded-full w-10">
-<span>N</span>
-</div>
-</div>
-<div>
-<div class="font-semibold text-sm">Nina</div>
-<div class="text-xs text-base-content/60">mama malčka, 18 mesecev</div>
-</div>
-</div>
-</div>
-</div></p>
-<p><div class="card bg-base-100 shadow-sm">
-<div class="card-body">
-<div class="text-secondary text-5xl font-display leading-none -mb-2">&quot;</div>
-<p class="italic text-base-content/90">Prebujala sem se petkrat na noč in bila popolnoma izčrpana. Eva mi je pomagala razumeti, kaj se dogaja, in skupaj smo naredili korake, ki so spremenili naše noči.</p>
-<div class="flex items-center gap-3 mt-4">
-<div class="avatar placeholder">
-<div class="bg-accent text-accent-content rounded-full w-10">
-<span>K</span>
-</div>
-</div>
-<div>
-<div class="font-semibold text-sm">Klara</div>
-<div class="text-xs text-base-content/60">mama 6-mesečnega fantka</div>
-</div>
-</div>
-</div>
-</div></p>
+    
+    
+      <div class="card bg-base-100 shadow-sm">
+        <div class="card-body">
+          <div class="text-secondary text-5xl font-display leading-none -mb-2">"</div>
+          <p class="italic text-base-content/90">Po dveh tednih sodelovanja naš malček spi v kosu celo noč. Najbolj sem hvaležna za nežen pristop — nič joka, samo postopne spremembe.</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="avatar placeholder">
+              <div class="bg-accent text-accent-content rounded-full w-10">
+                <span>M</span>
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm">Maja</div>
+              <div class="text-xs text-base-content/60">mama 10-mesečnega fantka</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card bg-base-100 shadow-sm">
+        <div class="card-body">
+          <div class="text-secondary text-5xl font-display leading-none -mb-2">"</div>
+          <p class="italic text-base-content/90">Nežna in strokovna podpora — počutila sem se slišana in razumljena. Eva je razumela našo situacijo in nam pripravila načrt, ki je deloval.</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="avatar placeholder">
+              <div class="bg-accent text-accent-content rounded-full w-10">
+                <span>A</span>
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm">Ana</div>
+              <div class="text-xs text-base-content/60">mama 8-mesečne deklice</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card bg-base-100 shadow-sm">
+        <div class="card-body">
+          <div class="text-secondary text-5xl font-display leading-none -mb-2">"</div>
+          <p class="italic text-base-content/90">Mislila sem, da je nemogoče, da bi naša 18-mesečna hči zaspala brez ur dolgega zibanja. Po treh tednih je zaspala sama, mirno in brez stresa.</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="avatar placeholder">
+              <div class="bg-accent text-accent-content rounded-full w-10">
+                <span>N</span>
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm">Nina</div>
+              <div class="text-xs text-base-content/60">mama malčka, 18 mesecev</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card bg-base-100 shadow-sm">
+        <div class="card-body">
+          <div class="text-secondary text-5xl font-display leading-none -mb-2">"</div>
+          <p class="italic text-base-content/90">Prebujala sem se petkrat na noč in bila popolnoma izčrpana. Eva mi je pomagala razumeti, kaj se dogaja, in skupaj smo naredili korake, ki so spremenili naše noči.</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="avatar placeholder">
+              <div class="bg-accent text-accent-content rounded-full w-10">
+                <span>K</span>
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm">Klara</div>
+              <div class="text-xs text-base-content/60">mama 6-mesečnega fantka</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
   </div>
 </section>
+
 <section class="section">
   <div class="card lg:card-side bg-base-100 shadow-md overflow-hidden">
     <figure class="lg:w-1/3 bg-accent">
-      <img src="/assets/images/eva.jpg" alt="Eva" class="w-full h-48 sm:h-64 lg:h-full object-cover" />
+      <img src="/assets/images/eva_silhouete.png" alt="Eva" loading="lazy" class="w-full h-48 sm:h-64 lg:h-full object-cover" />
     </figure>
     <div class="card-body lg:w-2/3">
       <h3 class="card-title font-display text-xl sm:text-2xl">Eva — fizioterapevtka in svetovalka za spanje</h3>
@@ -200,11 +202,12 @@
     </div>
   </div>
 </section>
+
 <section class="section">
-  <div class="card bg-gradient-to-r from-primary to-secondary text-primary-content shadow-lg">
+  <div class="card bg-secondary text-secondary-content shadow-lg">
     <div class="card-body items-center text-center py-10 md:py-12">
       <h2 class="card-title font-display text-2xl sm:text-3xl md:text-4xl">Pripravljeni na mirnejše noči?</h2>
-      <p class="text-base sm:text-lg">Začnimo z brezplačnim uvodnim pogovorom.</p>
+      <p class="text-base sm:text-lg opacity-90">Začnimo z brezplačnim uvodnim pogovorom.</p>
       <div class="card-actions mt-4 w-full sm:w-auto">
         <a href="/kontakt" class="btn btn-neutral btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
       </div>
@@ -214,18 +217,68 @@
 
   </main>
 
-  <footer class="footer footer-center bg-neutral text-neutral-content p-10 mt-12">
-    <aside>
-      <div class="font-display text-xl font-semibold">Znanje za Spanje</div>
-      <p class="text-sm opacity-80">© 2025 Eva — Vse pravice pridržane</p>
-    </aside>
-    <nav>
-      <div class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm items-center">
-        <a href="mailto:" class="link link-hover break-all"></a>
-        <span class="opacity-50 hidden sm:inline">·</span>
-        <a href="https://instagram.com/" target="_blank" rel="noopener" class="link link-hover"></a>
+  <footer class="bg-neutral text-neutral-content mt-12">
+    <div class="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+      <div class="md:col-span-2 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="avatar">
+            <div class="w-10 h-10 rounded-full bg-base-100">
+              <img src="/assets/images/logo.png" alt="Logo Znanje za Spanje" width="200" height="200" loading="lazy" />
+            </div>
+          </div>
+          <span class="font-display text-xl font-semibold">Znanje za Spanje</span>
+        </div>
+        <p class="text-sm opacity-80 max-w-sm leading-relaxed">Svetovanje za spanje dojenčkov in malčkov — nežno, postopno in brez stresa. Eva, fizioterapevtka in svetovalka za spanje.</p>
+        <div class="flex gap-2 pt-1">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="btn btn-circle btn-sm btn-ghost hover:bg-neutral-content/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="mailto:" aria-label="Email" class="btn btn-circle btn-sm btn-ghost hover:bg-neutral-content/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
-    </nav>
+
+      <div>
+        <h4 class="font-display font-semibold mb-3">Strani</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="opacity-80 hover:opacity-100 hover:underline">Domov</a></li>
+          <li><a href="/o-meni" class="opacity-80 hover:opacity-100 hover:underline">O meni</a></li>
+          <li><a href="/storitve" class="opacity-80 hover:opacity-100 hover:underline">Storitve</a></li>
+          <li><a href="/blog" class="opacity-80 hover:opacity-100 hover:underline">Blog</a></li>
+          <li><a href="/kontakt" class="opacity-80 hover:opacity-100 hover:underline">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold mb-3">Kontakt</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="mailto:" class="opacity-80 hover:opacity-100 hover:underline break-all"></a></li>
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener" class="opacity-80 hover:opacity-100 hover:underline"></a></li>
+          <li class="pt-2"><a href="/kontakt" class="btn btn-secondary btn-sm">Rezerviraj posvet</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-neutral-content/10">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs opacity-70 text-center sm:text-left">
+        <span>© 2026 Znanje za Spanje — Eva. Vse pravice pridržane.</span>
+        <span>
+          Foto:
+          <a href="https://unsplash.com/@ujitomo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" class="link link-hover">Tomoko Uji</a>
+          /
+          <a href="https://unsplash.com/photos/pink-and-white-flowers-under-white-sky-during-daytime-kxvn1ogpTtE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" class="link link-hover">Unsplash</a>
+        </span>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

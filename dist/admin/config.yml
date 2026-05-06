@@ -21,7 +21,7 @@ files:
     fields:
       - { label: "Hero title", name: "hero_title", widget: "string", default: "Pomagam družinam do mirnih noči in spočite mame." }
       - { label: "Hero subtitle", name: "hero_subtitle", widget: "text", default: "Svetovanje za spanje dojenčkov in malčkov, prilagojeno vaši družini." }
-      - { label: "Hero image", name: "hero_image", widget: "image", required: false }
+      - { label: "Hero image", name: "hero_image", widget: "image", required: false, hint: "Slika v ozadju hero sekcije na naslovni strani. Uporabi širinski (landscape) format, vsaj 1600×900 px. Pokončne slike ne delujejo dobro." }
       - { label: "Komu pomagam (paragraph)", name: "komu", widget: "text", default: "Če vaš dojenček težko zaspi..." }
 
 collections:

@@ -15,15 +15,12 @@
   <header class="navbar min-h-0 py-2 bg-base-100/80 backdrop-blur sticky top-0 z-30 border-b border-base-300">
     <div class="max-w-5xl mx-auto w-full px-4 flex items-center justify-between gap-2">
       <a href="/" class="flex items-center gap-3 min-w-0">
-        <div class="avatar placeholder shrink-0">
-          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary text-secondary-content">
-            <span class="text-sm font-bold">ZS</span>
+        <div class="avatar shrink-0">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full">
+            <img src="/assets/images/logo.png" alt="Logo Znanje za Spanje" width="200" height="200" />
           </div>
         </div>
-        <div class="leading-tight min-w-0">
-          <div class="font-display text-base sm:text-lg font-semibold truncate">Znanje za Spanje</div>
-          <div class="hidden sm:block text-xs text-base-content/60 truncate">Svetovanje za spanje dojenčkov — Eva</div>
-        </div>
+        <span class="font-display text-lg sm:text-xl md:text-2xl font-semibold truncate">Znanje za Spanje</span>
       </a>
       <nav class="hidden md:flex items-center gap-1">
         <a href="/" class="btn btn-ghost btn-sm rounded-full">Domov</a>
@@ -48,12 +45,13 @@
   </header>
 
   <main class="flex-1">
-    <section class="section">
+    
+<section class="section">
   <div class="grid lg:grid-cols-5 gap-10 items-start">
     <div class="lg:col-span-2">
       <div class="card bg-base-100 shadow-md overflow-hidden">
-        <figure class="aspect-square">
-          <img src="/assets/images/eva.jpg" alt="Eva" class="w-full h-full object-cover" />
+        <figure class="aspect-square bg-gradient-to-br from-accent via-base-200 to-secondary/40 p-8">
+          <img src="/assets/images/eva_silhouete.png" alt="Eva — silhueta" class="w-full h-full object-contain" />
         </figure>
       </div>
       <div class="stats stats-vertical shadow-sm bg-base-100 mt-6 w-full">
@@ -76,35 +74,39 @@
       <h1 class="font-display text-3xl sm:text-4xl md:text-5xl">Eva</h1>
       <p class="text-lg text-base-content/80">Sem fizioterapevtka, ki se specializira v svetovanju za spanje dojenčkov in malčkov. Združujem znanja iz fizioterapije z nežnimi pristopi za izboljšanje spanja, prilagojenimi vsaki družini.</p>
       <p class="text-base-content/80">Po lastnih izkušnjah materinstva sem spoznala, kako močno pomanjkanje spanja vpliva na celotno družino — in kako pomembno je imeti nekoga, ki vas pelje korak za korakom skozi spremembe, ne da bi obsojal vaše dosedanje odločitve.</p>
-<p><div class="divider"></div></p>
-<p><h2 class="font-display text-2xl">Zakaj mi lahko zaupate</h2>
-<ul class="space-y-3">
-<li class="flex items-start gap-3">
-<span class="badge badge-primary badge-lg shrink-0">✓</span>
-<span>Izkušnje s sodelovanjem z mladimi družinami</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="badge badge-primary badge-lg shrink-0">✓</span>
-<span>Pristop, ki spoštuje starševski stil in otrokove potrebe</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="badge badge-primary badge-lg shrink-0">✓</span>
-<span>Strokovno znanje iz fizioterapije in razvoja dojenčkov</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="badge badge-primary badge-lg shrink-0">✓</span>
-<span>Podpora po posvetu — ne ostanete sami</span>
-</li>
-</ul>
-</div></p>
+
+      <div class="divider"></div>
+
+      <h2 class="font-display text-2xl">Zakaj mi lahko zaupate</h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span>Izkušnje s sodelovanjem z mladimi družinami</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span>Pristop, ki spoštuje starševski stil in otrokove potrebe</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span>Strokovno znanje iz fizioterapije in razvoja dojenčkov</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span>Podpora po posvetu — ne ostanete sami</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
+
 <section class="section">
   <div class="text-center max-w-2xl mx-auto mb-10">
     <div class="badge badge-secondary mb-4">Moj pristop</div>
     <h2 class="font-display text-2xl sm:text-3xl md:text-4xl mb-4">Nežno, postopno, brez stresa</h2>
     <p class="text-base-content/70">Ne verjamem v metode "pusti ga jokati". Verjamem v predvidljivost, jasne meje in v to, da ima vsak otrok svoj tempo.</p>
   </div>
+
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
@@ -129,11 +131,13 @@
     </div>
   </div>
 </section>
+
 <section class="section">
   <div class="text-center max-w-2xl mx-auto mb-10">
     <div class="badge badge-secondary mb-4">FAQ</div>
     <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Pogosta vprašanja</h2>
   </div>
+
   <div class="max-w-3xl mx-auto space-y-3">
     <div class="collapse collapse-plus bg-base-100 shadow-sm">
       <input type="radio" name="faq-accordion" checked />
@@ -142,48 +146,54 @@
         <p>Načeloma od 4. meseca dalje, ko se začnejo vzpostavljati zrelejši cikli spanja. Pri mlajših dojenčkih se pogovarjamo predvsem o realnih pričakovanjih, varnem spancu in podpori starša.</p>
       </div>
     </div>
-<p><div class="collapse collapse-plus bg-base-100 shadow-sm">
-<input type="radio" name="faq-accordion" />
-<div class="collapse-title font-display text-lg font-semibold">Ali delate na daljavo?</div>
-<div class="collapse-content text-base-content/80">
-<p>Da, večina posvetov poteka preko videoklica (Zoom ali Google Meet). To je za večino družin tudi udobnejše — pogovor lahko opravimo med otrokovim spancem ali zvečer.</p>
-</div>
-</div></p>
-<p><div class="collapse collapse-plus bg-base-100 shadow-sm">
-<input type="radio" name="faq-accordion" />
-<div class="collapse-title font-display text-lg font-semibold">Ali zagovarjate metodo &quot;cry it out&quot;?</div>
-<div class="collapse-content text-base-content/80">
-<p>Ne. Moj pristop je nežen in postopen. Otroka nikoli ne pustimo samega v stiski. Cilj je, da se otrok nauči zaspati v varnem okolju, kjer ve, da je mama ali oče v bližini.</p>
-</div>
-</div></p>
-<p><div class="collapse collapse-plus bg-base-100 shadow-sm">
-<input type="radio" name="faq-accordion" />
-<div class="collapse-title font-display text-lg font-semibold">Koliko časa traja, da vidimo izboljšave?</div>
-<div class="collapse-content text-base-content/80">
-<p>Večina družin opazi prve spremembe v 7–10 dneh. Stabilnejše rezultate običajno dosežemo v 2–3 tednih, odvisno od izhodišča in doslednosti.</p>
-</div>
-</div></p>
-<p><div class="collapse collapse-plus bg-base-100 shadow-sm">
-<input type="radio" name="faq-accordion" />
-<div class="collapse-title font-display text-lg font-semibold">Ali še lahko dojim ponoči?</div>
-<div class="collapse-content text-base-content/80">
-<p>Seveda. Načrt prilagodim vašemu načinu hranjenja — dojenju, stekleničkam ali kombinaciji. Cilj ni odstavitev, ampak boljši spanec znotraj načina, ki vam ustreza.</p>
-</div>
-</div></p>
-<p><div class="collapse collapse-plus bg-base-100 shadow-sm">
-<input type="radio" name="faq-accordion" />
-<div class="collapse-title font-display text-lg font-semibold">Kaj če imamo dvojčke ali več otrok?</div>
-<div class="collapse-content text-base-content/80">
-<p>Sodelujem tudi z družinami z dvojčki in več otroki. Načrt v takem primeru upošteva dinamiko vse družine in praktične omejitve, ki jih to prinese.</p>
-</div>
-</div></p>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Ali delate na daljavo?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Da, večina posvetov poteka preko videoklica (Zoom ali Google Meet). To je za večino družin tudi udobnejše — pogovor lahko opravimo med otrokovim spancem ali zvečer.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Ali zagovarjate metodo "cry it out"?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Ne. Moj pristop je nežen in postopen. Otroka nikoli ne pustimo samega v stiski. Cilj je, da se otrok nauči zaspati v varnem okolju, kjer ve, da je mama ali oče v bližini.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Koliko časa traja, da vidimo izboljšave?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Večina družin opazi prve spremembe v 7–10 dneh. Stabilnejše rezultate običajno dosežemo v 2–3 tednih, odvisno od izhodišča in doslednosti.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Ali še lahko dojim ponoči?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Seveda. Načrt prilagodim vašemu načinu hranjenja — dojenju, stekleničkam ali kombinaciji. Cilj ni odstavitev, ampak boljši spanec znotraj načina, ki vam ustreza.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 shadow-sm">
+      <input type="radio" name="faq-accordion" />
+      <div class="collapse-title font-display text-lg font-semibold">Kaj če imamo dvojčke ali več otrok?</div>
+      <div class="collapse-content text-base-content/80">
+        <p>Sodelujem tudi z družinami z dvojčki in več otroki. Načrt v takem primeru upošteva dinamiko vse družine in praktične omejitve, ki jih to prinese.</p>
+      </div>
+    </div>
   </div>
 </section>
+
 <section class="section">
-  <div class="card bg-gradient-to-r from-primary to-secondary text-primary-content shadow-lg">
+  <div class="card bg-secondary text-secondary-content shadow-lg">
     <div class="card-body items-center text-center py-10 md:py-12">
       <h2 class="card-title font-display text-2xl sm:text-3xl md:text-4xl">Pripravljeni na pogovor?</h2>
-      <p class="text-base sm:text-lg">Začnimo s kratkim, brezplačnim uvodnim klicem.</p>
+      <p class="text-base sm:text-lg opacity-90">Začnimo s kratkim, brezplačnim uvodnim klicem.</p>
       <div class="card-actions mt-4 w-full sm:w-auto">
         <a href="/kontakt" class="btn btn-neutral btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
       </div>
@@ -193,18 +203,68 @@
 
   </main>
 
-  <footer class="footer footer-center bg-neutral text-neutral-content p-10 mt-12">
-    <aside>
-      <div class="font-display text-xl font-semibold">Znanje za Spanje</div>
-      <p class="text-sm opacity-80">© 2025 Eva — Vse pravice pridržane</p>
-    </aside>
-    <nav>
-      <div class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm items-center">
-        <a href="mailto:" class="link link-hover break-all"></a>
-        <span class="opacity-50 hidden sm:inline">·</span>
-        <a href="https://instagram.com/" target="_blank" rel="noopener" class="link link-hover"></a>
+  <footer class="bg-neutral text-neutral-content mt-12">
+    <div class="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+      <div class="md:col-span-2 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="avatar">
+            <div class="w-10 h-10 rounded-full bg-base-100">
+              <img src="/assets/images/logo.png" alt="Logo Znanje za Spanje" width="200" height="200" loading="lazy" />
+            </div>
+          </div>
+          <span class="font-display text-xl font-semibold">Znanje za Spanje</span>
+        </div>
+        <p class="text-sm opacity-80 max-w-sm leading-relaxed">Svetovanje za spanje dojenčkov in malčkov — nežno, postopno in brez stresa. Eva, fizioterapevtka in svetovalka za spanje.</p>
+        <div class="flex gap-2 pt-1">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="btn btn-circle btn-sm btn-ghost hover:bg-neutral-content/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="mailto:" aria-label="Email" class="btn btn-circle btn-sm btn-ghost hover:bg-neutral-content/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
-    </nav>
+
+      <div>
+        <h4 class="font-display font-semibold mb-3">Strani</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="opacity-80 hover:opacity-100 hover:underline">Domov</a></li>
+          <li><a href="/o-meni" class="opacity-80 hover:opacity-100 hover:underline">O meni</a></li>
+          <li><a href="/storitve" class="opacity-80 hover:opacity-100 hover:underline">Storitve</a></li>
+          <li><a href="/blog" class="opacity-80 hover:opacity-100 hover:underline">Blog</a></li>
+          <li><a href="/kontakt" class="opacity-80 hover:opacity-100 hover:underline">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold mb-3">Kontakt</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="mailto:" class="opacity-80 hover:opacity-100 hover:underline break-all"></a></li>
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener" class="opacity-80 hover:opacity-100 hover:underline"></a></li>
+          <li class="pt-2"><a href="/kontakt" class="btn btn-secondary btn-sm">Rezerviraj posvet</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-neutral-content/10">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs opacity-70 text-center sm:text-left">
+        <span>© 2026 Znanje za Spanje — Eva. Vse pravice pridržane.</span>
+        <span>
+          Foto:
+          <a href="https://unsplash.com/@ujitomo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" class="link link-hover">Tomoko Uji</a>
+          /
+          <a href="https://unsplash.com/photos/pink-and-white-flowers-under-white-sky-during-daytime-kxvn1ogpTtE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" class="link link-hover">Unsplash</a>
+        </span>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

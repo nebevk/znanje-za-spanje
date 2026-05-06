@@ -15,15 +15,12 @@
   <header class="navbar min-h-0 py-2 bg-base-100/80 backdrop-blur sticky top-0 z-30 border-b border-base-300">
     <div class="max-w-5xl mx-auto w-full px-4 flex items-center justify-between gap-2">
       <a href="/" class="flex items-center gap-3 min-w-0">
-        <div class="avatar placeholder shrink-0">
-          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary text-secondary-content">
-            <span class="text-sm font-bold">ZS</span>
+        <div class="avatar shrink-0">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full">
+            <img src="/assets/images/logo.png" alt="Logo Znanje za Spanje" width="200" height="200" />
           </div>
         </div>
-        <div class="leading-tight min-w-0">
-          <div class="font-display text-base sm:text-lg font-semibold truncate">{{ site.brand or "Znanje za Spanje" }}</div>
-          <div class="hidden sm:block text-xs text-base-content/60 truncate">Svetovanje za spanje dojenčkov — Eva</div>
-        </div>
+        <span class="font-display text-lg sm:text-xl md:text-2xl font-semibold truncate">{{ site.brand or "Znanje za Spanje" }}</span>
       </a>
       <nav class="hidden md:flex items-center gap-1">
         <a href="/" class="btn btn-ghost btn-sm rounded-full">Domov</a>
@@ -51,18 +48,68 @@
     {{ content | safe }}
   </main>
 
-  <footer class="footer footer-center bg-neutral text-neutral-content p-10 mt-12">
-    <aside>
-      <div class="font-display text-xl font-semibold">{{ site.brand or "Znanje za Spanje" }}</div>
-      <p class="text-sm opacity-80">© 2025 Eva — Vse pravice pridržane</p>
-    </aside>
-    <nav>
-      <div class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm items-center">
-        <a href="mailto:{{ site.email }}" class="link link-hover break-all">{{ site.email }}</a>
-        <span class="opacity-50 hidden sm:inline">·</span>
-        <a href="https://instagram.com/{{ site.instagram | replace('@', '') }}" target="_blank" rel="noopener" class="link link-hover">{{ site.instagram }}</a>
+  <footer class="bg-neutral text-neutral-content mt-12">
+    <div class="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+      <div class="md:col-span-2 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="avatar">
+            <div class="w-10 h-10 rounded-full bg-base-100">
+              <img src="/assets/images/logo.png" alt="Logo Znanje za Spanje" width="200" height="200" loading="lazy" />
+            </div>
+          </div>
+          <span class="font-display text-xl font-semibold">{{ site.brand or "Znanje za Spanje" }}</span>
+        </div>
+        <p class="text-sm opacity-80 max-w-sm leading-relaxed">Svetovanje za spanje dojenčkov in malčkov — nežno, postopno in brez stresa. Eva, fizioterapevtka in svetovalka za spanje.</p>
+        <div class="flex gap-2 pt-1">
+          <a href="https://instagram.com/{{ site.instagram | replace('@', '') }}" target="_blank" rel="noopener" aria-label="Instagram" class="btn btn-circle btn-sm btn-ghost hover:bg-neutral-content/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="mailto:{{ site.email }}" aria-label="Email" class="btn btn-circle btn-sm btn-ghost hover:bg-neutral-content/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
-    </nav>
+
+      <div>
+        <h4 class="font-display font-semibold mb-3">Strani</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="opacity-80 hover:opacity-100 hover:underline">Domov</a></li>
+          <li><a href="/o-meni" class="opacity-80 hover:opacity-100 hover:underline">O meni</a></li>
+          <li><a href="/storitve" class="opacity-80 hover:opacity-100 hover:underline">Storitve</a></li>
+          <li><a href="/blog" class="opacity-80 hover:opacity-100 hover:underline">Blog</a></li>
+          <li><a href="/kontakt" class="opacity-80 hover:opacity-100 hover:underline">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold mb-3">Kontakt</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="mailto:{{ site.email }}" class="opacity-80 hover:opacity-100 hover:underline break-all">{{ site.email }}</a></li>
+          <li><a href="https://instagram.com/{{ site.instagram | replace('@', '') }}" target="_blank" rel="noopener" class="opacity-80 hover:opacity-100 hover:underline">{{ site.instagram }}</a></li>
+          <li class="pt-2"><a href="/kontakt" class="btn btn-secondary btn-sm">Rezerviraj posvet</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-neutral-content/10">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs opacity-70 text-center sm:text-left">
+        <span>© {{ build.year }} {{ site.brand or "Znanje za Spanje" }} — Eva. Vse pravice pridržane.</span>
+        <span>
+          Foto:
+          <a href="https://unsplash.com/@ujitomo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" class="link link-hover">Tomoko Uji</a>
+          /
+          <a href="https://unsplash.com/photos/pink-and-white-flowers-under-white-sky-during-daytime-kxvn1ogpTtE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" class="link link-hover">Unsplash</a>
+        </span>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

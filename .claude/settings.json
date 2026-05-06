@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node node_modules/tailwindcss/lib/cli.js --help)"
+      "Bash(node node_modules/tailwindcss/lib/cli.js --help)",
+      "Bash(ls \"/c/Users/Nejc/.claude/projects/\" 2>&1 | head; ls \"C:/Users/Nejc/.claude/projects/c--Users-Nejc-Desktop-dev-znanje-za-spanje/memory/\" 2>&1)",
+      "Read(//c/Users/Nejc/.claude/projects//**)",
+      "Read(//c/Users/Nejc/.claude/projects/c--Users-Nejc-Desktop-dev-znanje-za-spanje/**)",
+      "WebFetch(domain:daisyui.com)"
     ]
   }
 }

@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Storitve
+templateEngineOverride: liquid
 ---
 
 <section class="section">

@@ -1,14 +1,15 @@
 ---
 layout: base
 title: O meni
+templateEngineOverride: liquid
 ---
 
 <section class="section">
   <div class="grid lg:grid-cols-5 gap-10 items-start">
     <div class="lg:col-span-2">
       <div class="card bg-base-100 shadow-md overflow-hidden">
-        <figure class="aspect-square">
-          <img src="/assets/images/eva.jpg" alt="Eva" class="w-full h-full object-cover" />
+        <figure class="aspect-square bg-gradient-to-br from-accent via-base-200 to-secondary/40 p-8">
+          <img src="/assets/images/eva_silhouete.png" alt="Eva — silhueta" class="w-full h-full object-contain" />
         </figure>
       </div>
       <div class="stats stats-vertical shadow-sm bg-base-100 mt-6 w-full">
@@ -147,10 +148,10 @@ title: O meni
 </section>
 
 <section class="section">
-  <div class="card bg-gradient-to-r from-primary to-secondary text-primary-content shadow-lg">
+  <div class="card bg-secondary text-secondary-content shadow-lg">
     <div class="card-body items-center text-center py-10 md:py-12">
       <h2 class="card-title font-display text-2xl sm:text-3xl md:text-4xl">Pripravljeni na pogovor?</h2>
-      <p class="text-base sm:text-lg">Začnimo s kratkim, brezplačnim uvodnim klicem.</p>
+      <p class="text-base sm:text-lg opacity-90">Začnimo s kratkim, brezplačnim uvodnim klicem.</p>
       <div class="card-actions mt-4 w-full sm:w-auto">
         <a href="/kontakt" class="btn btn-neutral btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
       </div>

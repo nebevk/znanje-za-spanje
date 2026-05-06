@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Kontakt
+templateEngineOverride: liquid
 ---
 
 <section class="section">

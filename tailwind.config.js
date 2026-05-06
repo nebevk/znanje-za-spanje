@@ -16,8 +16,8 @@ module.exports = {
         zzs: {
           "primary": "#DFAEA3",
           "primary-content": "#2E2A28",
-          "secondary": "#C9B6D8",
-          "secondary-content": "#2E2A28",
+          "secondary": "#057650",
+          "secondary-content": "#F7EFE8",
           "accent": "#F3E6E0",
           "accent-content": "#2E2A28",
           "neutral": "#2E2A28",

@@ -1,27 +1,22 @@
 ---
 layout: base
 title: Domov
+templateEngineOverride: liquid
 ---
 
-<section class="hero min-h-[60vh] md:min-h-[70vh] bg-gradient-to-br from-accent via-base-200 to-secondary/40">
-  <div class="hero-content flex-col lg:flex-row gap-8 md:gap-12 max-w-5xl px-4 py-12 md:py-16 w-full">
-    <div class="lg:w-1/2 space-y-6 w-full">
-      <div class="badge badge-secondary badge-lg gap-2">
+<section class="hero relative min-h-[75vh] md:min-h-[85vh] bg-cover bg-center bg-no-repeat" style="background-image: url('{{ home.hero_image | default: '/assets/images/tomoko-uji-kxvn1ogpTtE-unsplash.jpg' }}');">
+  <div class="absolute inset-0 bg-gradient-to-b from-base-200/30 via-base-200/55 to-base-200/85"></div>
+  <div class="hero-content relative z-10 text-center px-4 py-16 md:py-20">
+    <div class="max-w-3xl space-y-6">
+      <div class="badge badge-secondary badge-lg gap-2 shadow-sm">
         <span class="w-2 h-2 rounded-full bg-secondary-content/50"></span>
         Svetovanje za spanje
       </div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-semibold leading-tight">{{ home.hero_title }}</h1>
-      <p class="text-base sm:text-lg text-base-content/80">{{ home.hero_subtitle }}</p>
-      <div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4">
-        <a href="/kontakt" class="btn btn-primary btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
-        <a href="/storitve" class="btn btn-ghost btn-lg w-full sm:w-auto">Poglej storitve →</a>
-      </div>
-    </div>
-    <div class="lg:w-1/2 w-full">
-      <div class="card bg-base-100 shadow-xl lg:rotate-1 lg:hover:rotate-0 transition-transform overflow-hidden">
-        <figure class="aspect-[4/3]">
-          <img src="{{ home.hero_image | default: '/assets/images/hero-placeholder.jpg' }}" alt="Mirne noči za vašo družino" class="w-full h-full object-cover" />
-        </figure>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold leading-tight text-base-content">{{ home.hero_title }}</h1>
+      <p class="text-base sm:text-lg text-base-content/85 max-w-2xl mx-auto">{{ home.hero_subtitle }}</p>
+      <div class="flex flex-col sm:flex-row justify-center sm:items-center gap-3 sm:gap-4 pt-2">
+        <a href="/kontakt" class="btn btn-primary btn-lg w-full sm:w-auto shadow-md">Rezerviraj posvet</a>
+        <a href="/storitve" class="btn btn-ghost btn-lg w-full sm:w-auto bg-base-100/60 hover:bg-base-100/80 backdrop-blur-sm">Poglej storitve →</a>
       </div>
     </div>
   </div>
@@ -100,7 +95,7 @@ title: Domov
 <section class="section">
   <div class="card lg:card-side bg-base-100 shadow-md overflow-hidden">
     <figure class="lg:w-1/3 bg-accent">
-      <img src="/assets/images/eva.jpg" alt="Eva" class="w-full h-48 sm:h-64 lg:h-full object-cover" />
+      <img src="/assets/images/eva_silhouete.png" alt="Eva" loading="lazy" class="w-full h-48 sm:h-64 lg:h-full object-cover" />
     </figure>
     <div class="card-body lg:w-2/3">
       <h3 class="card-title font-display text-xl sm:text-2xl">Eva — fizioterapevtka in svetovalka za spanje</h3>
@@ -113,10 +108,10 @@ title: Domov
 </section>
 
 <section class="section">
-  <div class="card bg-gradient-to-r from-primary to-secondary text-primary-content shadow-lg">
+  <div class="card bg-secondary text-secondary-content shadow-lg">
     <div class="card-body items-center text-center py-10 md:py-12">
       <h2 class="card-title font-display text-2xl sm:text-3xl md:text-4xl">Pripravljeni na mirnejše noči?</h2>
-      <p class="text-base sm:text-lg">Začnimo z brezplačnim uvodnim pogovorom.</p>
+      <p class="text-base sm:text-lg opacity-90">Začnimo z brezplačnim uvodnim pogovorom.</p>
       <div class="card-actions mt-4 w-full sm:w-auto">
         <a href="/kontakt" class="btn btn-neutral btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
       </div>
