@@ -61,7 +61,7 @@ templateEngineOverride: liquid
 
   {% else %}
     <div class="alert bg-base-100 shadow-sm max-w-2xl mx-auto">
-      <span>Kmalu prvi članki — spremljajte. ✨</span>
+      <span>Kmalu prvi članki. Spremljajte. ✨</span>
     </div>
   {% endif %}
 </section>

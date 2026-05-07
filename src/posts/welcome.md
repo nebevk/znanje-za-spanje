@@ -1,5 +1,5 @@
 ---
-title: "Dobrodošli — nasveti za mirnejši spanec"
+title: "Dobrodošli, nasveti za mirnejši spanec"
 date: 2025-10-01
 ---
 

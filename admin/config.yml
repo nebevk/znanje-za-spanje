@@ -11,7 +11,8 @@ files:
     label: "Splošno (site settings)"
     name: "site_settings"
     fields:
-      - { label: "Brand name", name: "brand", widget: "string", default: "Znanje za Spanje" }
+      - { label: "Brand name", name: "brand", widget: "string", default: "Teta Luna" }
+      - { label: "Slogan / tagline", name: "tagline", widget: "string", default: "Znanje za spanje", hint: "Prikazan pod glavnim imenom v navigaciji." }
       - { label: "Contact email", name: "email", widget: "string", default: "eva@example.com" }
       - { label: "Instagram", name: "instagram", widget: "string", default: "@znanje_za_spanje" }
 

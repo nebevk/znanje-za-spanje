@@ -3,7 +3,7 @@ title: "Prehod z dveh na eno poldansko spanje"
 date: 2025-12-08
 ---
 
-Prehod z dveh na eno dnevno spanje je eden najtežjih za starše. Otrok je pogosto na meji — že prevelik za dva, še premajhen za eno daljše spanje.
+Prehod z dveh na eno dnevno spanje je eden najtežjih za starše. Otrok je pogosto na meji: že prevelik za dva, še premajhen za eno daljše spanje.
 
 ## Znaki pripravljenosti
 
@@ -15,7 +15,7 @@ Prehod je običajno smiseln med 13. in 18. mesecem starosti, ko opazite vsaj nek
 
 ## Postopni pristop
 
-Prehod ne pomeni, da od ponedeljka spi le še enkrat. Premaknite jutranje spanje za 15 minut vsake nekaj dni, dokler se ne zlije z opoldanskim. V vmesnem obdobju je popolnoma normalno, da otrok občasno spi enkrat in občasno dvakrat — odločitev sprejmite glede na to, kako je vstal in koliko časa je budil.
+Prehod ne pomeni, da od ponedeljka spi le še enkrat. Premaknite jutranje spanje za 15 minut vsake nekaj dni, dokler se ne zlije z opoldanskim. V vmesnem obdobju je popolnoma normalno, da otrok občasno spi enkrat in občasno dvakrat. Odločitev sprejmite glede na to, kako je vstal in koliko časa je budil.
 
 ## Pogosta past
 

@@ -98,7 +98,7 @@ templateEngineOverride: liquid
       <img src="/assets/images/eva_silhouete.png" alt="Eva" loading="lazy" class="w-full h-48 sm:h-64 lg:h-full object-cover" />
     </figure>
     <div class="card-body lg:w-2/3">
-      <h3 class="card-title font-display text-xl sm:text-2xl">Eva — fizioterapevtka in svetovalka za spanje</h3>
+      <h3 class="card-title font-display text-xl sm:text-2xl">Eva, fizioterapevtka in svetovalka za spanje</h3>
       <p class="text-base-content/80">Mame me obiščejo, ko so utrujene in želijo nežne, a učinkovite rešitve.</p>
       <div class="card-actions mt-2">
         <a href="/o-meni" class="btn btn-secondary btn-sm">Preberi več o meni</a>

@@ -9,7 +9,7 @@ templateEngineOverride: liquid
     <div class="lg:col-span-2">
       <div class="card bg-base-100 shadow-md overflow-hidden">
         <figure class="aspect-square bg-gradient-to-br from-accent via-base-200 to-secondary/40 p-8">
-          <img src="/assets/images/eva_silhouete.png" alt="Eva — silhueta" class="w-full h-full object-contain" />
+          <img src="/assets/images/eva_silhouete.png" alt="Eva, silhueta" class="w-full h-full object-contain" />
         </figure>
       </div>
       <div class="stats stats-vertical shadow-sm bg-base-100 mt-6 w-full">
@@ -31,7 +31,7 @@ templateEngineOverride: liquid
       <div class="badge badge-secondary">O meni</div>
       <h1 class="font-display text-3xl sm:text-4xl md:text-5xl">Eva</h1>
       <p class="text-lg text-base-content/80">Sem fizioterapevtka, ki se specializira v svetovanju za spanje dojenčkov in malčkov. Združujem znanja iz fizioterapije z nežnimi pristopi za izboljšanje spanja, prilagojenimi vsaki družini.</p>
-      <p class="text-base-content/80">Po lastnih izkušnjah materinstva sem spoznala, kako močno pomanjkanje spanja vpliva na celotno družino — in kako pomembno je imeti nekoga, ki vas pelje korak za korakom skozi spremembe, ne da bi obsojal vaše dosedanje odločitve.</p>
+      <p class="text-base-content/80">Po lastnih izkušnjah materinstva sem spoznala, kako močno pomanjkanje spanja vpliva na celotno družino, in kako pomembno je imeti nekoga, ki vas pelje korak za korakom skozi spremembe, ne da bi obsojal vaše dosedanje odločitve.</p>
 
       <div class="divider"></div>
 
@@ -51,7 +51,7 @@ templateEngineOverride: liquid
         </li>
         <li class="flex items-start gap-3">
           <span class="badge badge-primary badge-lg shrink-0">✓</span>
-          <span>Podpora po posvetu — ne ostanete sami</span>
+          <span>Podpora po posvetu, ne ostanete sami</span>
         </li>
       </ul>
     </div>
@@ -77,7 +77,7 @@ templateEngineOverride: liquid
       <div class="card-body">
         <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-2xl mb-2">🤍</div>
         <h3 class="card-title font-display text-xl">Spoštovanje vaših vrednot</h3>
-        <p class="text-sm text-base-content/70">Načrt prilagodimo temu, kar se vam zdi prav — ne nasprotno.</p>
+        <p class="text-sm text-base-content/70">Načrt prilagodimo temu, kar se vam zdi prav, ne nasprotno.</p>
       </div>
     </div>
     <div class="card bg-base-100 shadow-sm">
@@ -109,7 +109,7 @@ templateEngineOverride: liquid
       <input type="radio" name="faq-accordion" />
       <div class="collapse-title font-display text-lg font-semibold">Ali delate na daljavo?</div>
       <div class="collapse-content text-base-content/80">
-        <p>Da, večina posvetov poteka preko videoklica (Zoom ali Google Meet). To je za večino družin tudi udobnejše — pogovor lahko opravimo med otrokovim spancem ali zvečer.</p>
+        <p>Da, večina posvetov poteka preko videoklica (Zoom ali Google Meet). To je za večino družin tudi udobnejše. Pogovor lahko opravimo med otrokovim spancem ali zvečer.</p>
       </div>
     </div>
 
@@ -133,7 +133,7 @@ templateEngineOverride: liquid
       <input type="radio" name="faq-accordion" />
       <div class="collapse-title font-display text-lg font-semibold">Ali še lahko dojim ponoči?</div>
       <div class="collapse-content text-base-content/80">
-        <p>Seveda. Načrt prilagodim vašemu načinu hranjenja — dojenju, stekleničkam ali kombinaciji. Cilj ni odstavitev, ampak boljši spanec znotraj načina, ki vam ustreza.</p>
+        <p>Seveda. Načrt prilagodim vašemu načinu hranjenja: dojenju, stekleničkam ali kombinaciji. Cilj ni odstavitev, ampak boljši spanec znotraj načina, ki vam ustreza.</p>
       </div>
     </div>
 
