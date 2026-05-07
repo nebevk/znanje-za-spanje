@@ -5,7 +5,13 @@
       "Bash(ls \"/c/Users/Nejc/.claude/projects/\" 2>&1 | head; ls \"C:/Users/Nejc/.claude/projects/c--Users-Nejc-Desktop-dev-znanje-za-spanje/memory/\" 2>&1)",
       "Read(//c/Users/Nejc/.claude/projects//**)",
       "Read(//c/Users/Nejc/.claude/projects/c--Users-Nejc-Desktop-dev-znanje-za-spanje/**)",
-      "WebFetch(domain:daisyui.com)"
+      "WebFetch(domain:daisyui.com)",
+      "Bash(grep -oE '#[0-9A-Fa-f]{3,8}|rgb\\\\\\([^\\)]+\\\\\\)|fill=\"[^\"]*\"|style=\"[^\"]*\"' assets/images/logo_vector.svg)",
+      "Bash(grep -oE '<path[^/]{0,100}fill=\"rgb\\\\\\(9,118,81\\\\\\)\"' assets/images/logo_vector.svg)",
+      "Bash(grep -oE '<path[^/]{0,100}fill=\"rgb\\\\\\(251,253,252\\\\\\)\"' assets/images/logo_vector.svg)",
+      "Bash(grep -oP '.{60}fill=\"rgb\\\\\\(9,118,81\\\\\\)\".{60}' assets/images/logo_vector.svg)",
+      "Bash(grep -oP '.{60}fill=\"rgb\\\\\\(251,253,252\\\\\\)\".{60}' assets/images/logo_vector.svg)",
+      "Bash(awk ' *)"
     ]
   }
 }
