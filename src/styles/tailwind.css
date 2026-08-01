@@ -16,10 +16,15 @@
     scroll-margin-top: 6rem;
   }
   body {
-    @apply font-sans antialiased;
+    @apply font-sans antialiased text-base-content;
     overflow-wrap: break-word;
     hyphens: auto;
     -webkit-hyphens: auto;
+    background-color: theme("colors.base-200");
+    background-image:
+      radial-gradient(ellipse 80% 50% at 100% -10%, rgba(26, 92, 74, 0.06), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 0% 100%, rgba(44, 53, 64, 0.05), transparent 50%);
+    background-attachment: fixed;
   }
   h1, h2, h3, h4 {
     @apply font-display tracking-tight;
@@ -39,11 +44,28 @@
   .skip-link:focus {
     @apply not-sr-only fixed top-3 left-3 z-50 btn btn-primary btn-sm shadow-lg;
   }
-}
 
-@layer components {
   .section {
-    @apply max-w-5xl mx-auto px-4 md:px-6 py-10 md:py-16;
+    @apply max-w-5xl mx-auto px-4 md:px-6 py-14 md:py-20;
+  }
+
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl md:text-[2.75rem] leading-tight;
+  }
+
+  .section-lead {
+    @apply text-base-content/70 text-base sm:text-lg mt-3 max-w-2xl;
+  }
+
+  .nav-link {
+    @apply px-3 py-1.5 text-sm text-base-content/75 hover:text-base-content transition-colors;
+  }
+  .nav-link[aria-current="page"] {
+    @apply text-base-content font-medium;
+  }
+
+  .quote-mark {
+    @apply font-display text-5xl leading-none text-primary/40 select-none;
   }
 
   .post-body h2 { @apply font-display text-2xl md:text-3xl mt-10 mb-4; }
@@ -54,4 +76,13 @@
   .post-body a  { @apply link link-primary; }
   .post-body blockquote { @apply border-l-4 border-primary/40 pl-4 italic my-6 text-base-content/80; }
   .post-body img { @apply rounded-box shadow-sm my-6 max-w-full h-auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise-in,
+  .animate-fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

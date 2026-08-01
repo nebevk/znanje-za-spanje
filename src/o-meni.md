@@ -28,7 +28,6 @@ templateEngineOverride: liquid
       </div>
     </div>
     <div class="lg:col-span-3 space-y-6">
-      <div class="badge badge-secondary">O meni</div>
       <h1 class="font-display text-3xl sm:text-4xl md:text-5xl">Eva</h1>
       <p class="text-lg text-base-content/80">Sem fizioterapevtka, ki se specializira v svetovanju za spanje dojenčkov in malčkov. Združujem znanja iz fizioterapije z nežnimi pristopi za izboljšanje spanja, prilagojenimi vsaki družini.</p>
       <p class="text-base-content/80">Po lastnih izkušnjah materinstva sem spoznala, kako močno pomanjkanje spanja vpliva na celotno družino, in kako pomembno je imeti nekoga, ki vas pelje korak za korakom skozi spremembe, ne da bi obsojal vaše dosedanje odločitve.</p>
@@ -59,40 +58,29 @@ templateEngineOverride: liquid
 </section>
 
 <section class="section">
-  <div class="text-center max-w-2xl mx-auto mb-10">
-    <div class="badge badge-secondary mb-4">Moj pristop</div>
+  <div class="max-w-3xl">
     <h2 class="font-display text-2xl sm:text-3xl md:text-4xl mb-4">Nežno, postopno, brez stresa</h2>
     <p class="text-base-content/70">Ne verjamem v metode "pusti ga jokati". Verjamem v predvidljivost, jasne meje in v to, da ima vsak otrok svoj tempo.</p>
   </div>
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "search", "w-6 h-6" %}</div>
-        <h3 class="card-title font-display text-xl">Razumevanje pred ukrepanjem</h3>
-        <p class="text-sm text-base-content/70">Najprej razumemo, zakaj se nekaj dogaja. Šele nato spreminjamo.</p>
-      </div>
-    </div>
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "heart", "w-6 h-6" %}</div>
-        <h3 class="card-title font-display text-xl">Spoštovanje vaših vrednot</h3>
-        <p class="text-sm text-base-content/70">Načrt prilagodimo temu, kar se vam zdi prav, ne nasprotno.</p>
-      </div>
-    </div>
-    <div class="card bg-base-100 shadow-sm">
-      <div class="card-body">
-        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "sprout", "w-6 h-6" %}</div>
-        <h3 class="card-title font-display text-xl">Postopne spremembe</h3>
-        <p class="text-sm text-base-content/70">Majhni, jasni koraki. Brez šokov za otroka in brez stresa za starše.</p>
-      </div>
-    </div>
-  </div>
+  <ul class="mt-10 max-w-3xl divide-y divide-base-300 border-y border-base-300">
+    <li class="py-6">
+      <h3 class="font-display text-xl sm:text-2xl">Razumevanje pred ukrepanjem</h3>
+      <p class="text-sm text-base-content/70 mt-1">Najprej razumemo, zakaj se nekaj dogaja. Šele nato spreminjamo.</p>
+    </li>
+    <li class="py-6">
+      <h3 class="font-display text-xl sm:text-2xl">Spoštovanje vaših vrednot</h3>
+      <p class="text-sm text-base-content/70 mt-1">Načrt prilagodimo temu, kar se vam zdi prav, ne nasprotno.</p>
+    </li>
+    <li class="py-6">
+      <h3 class="font-display text-xl sm:text-2xl">Postopne spremembe</h3>
+      <p class="text-sm text-base-content/70 mt-1">Majhni, jasni koraki. Brez šokov za otroka in brez stresa za starše.</p>
+    </li>
+  </ul>
 </section>
 
 <section class="section">
-  <div class="text-center max-w-2xl mx-auto mb-10">
-    <div class="badge badge-secondary mb-4">FAQ</div>
+  <div class="max-w-3xl mb-10">
     <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Pogosta vprašanja</h2>
   </div>
 

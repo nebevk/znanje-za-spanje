@@ -7,7 +7,6 @@ templateEngineOverride: liquid
 <section class="section">
   <div class="grid lg:grid-cols-2 gap-10">
     <div>
-      <div class="badge badge-secondary mb-4">Kontakt</div>
       <h1 class="font-display text-3xl sm:text-4xl md:text-5xl mb-4">Pišite mi</h1>
       <p class="text-base-content/70 mb-8 text-base sm:text-lg">Imate vprašanje o spanju vašega otroka? Izpolnite obrazec in oglasila se vam bom v najkrajšem možnem času. Uvodni pogovor je brezplačen in brez obveznosti.</p>
 

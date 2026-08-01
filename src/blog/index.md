@@ -6,7 +6,6 @@ templateEngineOverride: liquid
 
 <section class="section">
   <div class="text-center max-w-2xl mx-auto mb-10">
-    <div class="badge badge-secondary mb-4">Baza znanja</div>
     <h1 class="font-display text-3xl sm:text-4xl md:text-5xl mb-4">Nasveti za mirnejši spanec</h1>
     <p class="text-base-content/70 text-base sm:text-lg">Praktični članki o spanju dojenčkov in malčkov. Poiščite temo, ki vas zanima.</p>
   </div>
@@ -21,12 +20,12 @@ templateEngineOverride: liquid
     </div>
 
     <div class="flex flex-wrap justify-center gap-2 mb-10">
-      <button type="button" class="kb-chip btn btn-sm rounded-full btn-primary" data-category="all">Vse</button>
+      <button type="button" class="kb-chip btn btn-sm btn-primary" data-category="all">Vse</button>
       {% for cat in categories %}
         {% assign count = 0 %}
         {% for p in collections.posts %}{% if p.data.category == cat.slug %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}
         {% if count > 0 %}
-          <button type="button" class="kb-chip btn btn-sm rounded-full btn-ghost" data-category="{{ cat.slug }}">{{ cat.label }}</button>
+          <button type="button" class="kb-chip btn btn-sm btn-ghost" data-category="{{ cat.slug }}">{{ cat.label }}</button>
         {% endif %}
       {% endfor %}
     </div>

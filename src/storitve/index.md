@@ -6,7 +6,6 @@ templateEngineOverride: liquid
 
 <section class="section">
   <div class="text-center max-w-2xl mx-auto mb-12">
-    <div class="badge badge-secondary mb-4">Storitve</div>
     <h1 class="font-display text-3xl sm:text-4xl md:text-5xl mb-4">Programi po meri</h1>
     <p class="text-base-content/70 text-base sm:text-lg">Ponujam prilagojene programe, ki podpirajo vas in vašega otroka.</p>
   </div>
@@ -75,35 +74,30 @@ templateEngineOverride: liquid
   </div>
 
   <div class="text-center max-w-2xl mx-auto mt-16 mb-10">
-    <div class="badge badge-secondary mb-4">Kako poteka</div>
     <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Pot do mirnejših noči</h2>
   </div>
-  <ul class="steps steps-vertical lg:steps-horizontal w-full">
-    <li class="step step-primary">
-      <div class="mt-3 max-w-[12rem]">
-        <div class="font-semibold">1. Uvodni pogovor</div>
-        <div class="text-sm text-base-content/70">Brezplačen kratek klic za spoznavanje</div>
-      </div>
+  <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+    <li>
+      <div class="font-display text-4xl text-primary/50">1</div>
+      <div class="font-semibold mt-2">Uvodni pogovor</div>
+      <div class="text-sm text-base-content/70 mt-1">Brezplačen kratek klic za spoznavanje</div>
     </li>
-    <li class="step step-primary">
-      <div class="mt-3 max-w-[12rem]">
-        <div class="font-semibold">2. Analiza</div>
-        <div class="text-sm text-base-content/70">Pregled rutine, vprašalnik in spanca</div>
-      </div>
+    <li>
+      <div class="font-display text-4xl text-primary/50">2</div>
+      <div class="font-semibold mt-2">Analiza</div>
+      <div class="text-sm text-base-content/70 mt-1">Pregled rutine, vprašalnik in spanca</div>
     </li>
-    <li class="step step-primary">
-      <div class="mt-3 max-w-[12rem]">
-        <div class="font-semibold">3. Načrt po meri</div>
-        <div class="text-sm text-base-content/70">Konkretni koraki za vašo družino</div>
-      </div>
+    <li>
+      <div class="font-display text-4xl text-primary/50">3</div>
+      <div class="font-semibold mt-2">Načrt po meri</div>
+      <div class="text-sm text-base-content/70 mt-1">Konkretni koraki za vašo družino</div>
     </li>
-    <li class="step step-primary">
-      <div class="mt-3 max-w-[12rem]">
-        <div class="font-semibold">4. Podpora</div>
-        <div class="text-sm text-base-content/70">Spremljanje med izvajanjem sprememb</div>
-      </div>
+    <li>
+      <div class="font-display text-4xl text-primary/50">4</div>
+      <div class="font-semibold mt-2">Podpora</div>
+      <div class="text-sm text-base-content/70 mt-1">Spremljanje med izvajanjem sprememb</div>
     </li>
-  </ul>
+  </ol>
 
   <div class="alert bg-secondary/30 border border-secondary/40 mt-12">
     <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 w-6 h-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" /></svg>
