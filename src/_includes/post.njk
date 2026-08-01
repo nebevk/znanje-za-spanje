@@ -2,15 +2,40 @@
 layout: base
 ---
 <article class="section max-w-3xl">
-  <a href="/blog" class="btn btn-ghost btn-sm mb-6">← Nazaj na blog</a>
+  <a href="/blog" class="btn btn-ghost btn-sm mb-6">← Nazaj na bazo znanja</a>
 
-  <div class="badge badge-secondary mb-4">Blog</div>
+  {% if category %}
+    <a href="/blog" class="badge badge-secondary mb-4">{{ category | categoryLabel }}</a>
+  {% else %}
+    <div class="badge badge-secondary mb-4">Nasvet</div>
+  {% endif %}
   <h1 class="font-display text-3xl sm:text-4xl md:text-5xl mb-4 leading-tight">{{ title }}</h1>
-  <div class="text-sm text-base-content/60 mb-8">{{ date | readableDate }}</div>
+  <div class="flex flex-wrap items-center gap-2 text-sm text-base-content/60 mb-8">
+    <time>{{ date | readableDate }}</time>
+    <span>·</span>
+    <span>{{ content | readingTime }}</span>
+  </div>
 
   <div class="post-body">
     {{ content | safe }}
   </div>
+
+  {% set related = collections.posts | relatedPosts(page.url, category, 3) %}
+  {% if related.length %}
+    <div class="mt-14">
+      <h2 class="font-display text-2xl mb-5">Povezani članki</h2>
+      <div class="grid sm:grid-cols-3 gap-4">
+        {% for post in related %}
+          <a href="{{ post.url }}" class="card bg-base-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <div class="card-body p-5">
+              <div class="text-xs text-base-content/50 uppercase tracking-wider mb-1">{{ post.data.date | readableDate }}</div>
+              <h3 class="font-display text-base leading-tight">{{ post.data.title }}</h3>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
 
   <div class="divider mt-12"></div>
 

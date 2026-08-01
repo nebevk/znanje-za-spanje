@@ -1,6 +1,7 @@
 ---
 title: "Pogosta nočna prebujanja: kaj je normalno in kaj ne"
 date: 2025-11-02
+category: prebujanja
 ---
 
 Vsi otroci se ponoči prebujajo. To je del normalnega cikla spanja. Vprašanje ni, ali se prebujajo, ampak ali se znajo sami uspavati nazaj.

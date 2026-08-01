@@ -15,6 +15,7 @@ files:
       - { label: "Slogan / tagline", name: "tagline", widget: "string", default: "Znanje za spanje", hint: "Prikazan pod glavnim imenom v navigaciji." }
       - { label: "Contact email", name: "email", widget: "string", default: "eva@example.com" }
       - { label: "Instagram", name: "instagram", widget: "string", default: "@znanje_za_spanje" }
+      - { label: "Spletni naslov (URL)", name: "url", widget: "string", default: "https://znanjezaspanje.netlify.app", hint: "Polni naslov strani, uporabljen za predogled pri deljenju povezav (Facebook, ...)." }
 
   - file: "src/_data/home.yml"
     label: "Domov - vsebina"
@@ -35,6 +36,19 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
+      # Vrednosti (value) morajo ustrezati seznamu CATEGORIES v .eleventy.js
+      - label: "Kategorija"
+        name: "category"
+        widget: "select"
+        required: false
+        hint: "Razvrsti članek v bazo znanja."
+        options:
+          - { label: "Osnove spanja", value: "osnove" }
+          - { label: "Nočna prebujanja", value: "prebujanja" }
+          - { label: "Dnevni spanci in ritem", value: "ritem" }
+          - { label: "Prehodi", value: "prehodi" }
+          - { label: "Hranjenje in spanje", value: "hranjenje" }
+          - { label: "Starostna obdobja", value: "starost" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "testimonials"
@@ -59,6 +73,9 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Duration", name: "duration", widget: "string", required: false, hint: "npr. '45 min' ali '60 min + 14 dni podpore'" }
+      - { label: "Price", name: "price", widget: "string", required: false, hint: "npr. '60 €'. Če pustiš prazno, se prikaže 'Cena na povpraševanje'." }
+      - { label: "Features (kaj je vključeno)", name: "features", widget: "list", required: false, hint: "Vsaka postavka je ena alineja s kljukico. Loči jih z vejico ali Enter." }
       - { label: "Badge", name: "badge", widget: "string", required: false, hint: "npr. 'Osnovni', 'Najbolj priljubljeno'" }
       - { label: "Featured", name: "featured", widget: "boolean", required: false, default: false, hint: "Označi kot izpostavljeno (večja kartica, drugačna barva)" }
       - { label: "Order", name: "order", widget: "number", required: false, default: 0, hint: "Manjše število = bolj levo" }

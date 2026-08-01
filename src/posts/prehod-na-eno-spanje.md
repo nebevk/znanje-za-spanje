@@ -1,6 +1,7 @@
 ---
 title: "Prehod z dveh na eno poldansko spanje"
 date: 2025-12-08
+category: prehodi
 ---
 
 Prehod z dveh na eno dnevno spanje je eden najtežjih za starše. Otrok je pogosto na meji: že prevelik za dva, še premajhen za eno daljše spanje.

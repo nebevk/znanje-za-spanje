@@ -29,6 +29,57 @@ templateEngineOverride: liquid
       <p class="text-base-content/80 text-base sm:text-lg">{{ home.komu }}</p>
     </div>
   </div>
+
+  <div class="text-center max-w-2xl mx-auto mt-14 mb-10">
+    <div class="badge badge-secondary mb-4">Pri čem pomagam</div>
+    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Se prepoznate v čem od tega?</h2>
+    <p class="text-base-content/70 mt-2">Najpogostejše težave, s katerimi me obiščejo družine.</p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="card-body">
+        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "moon", "w-6 h-6" %}</div>
+        <h3 class="card-title font-display text-lg">Težko uspavanje</h3>
+        <p class="text-sm text-base-content/70">Uspavanje traja dolgo in zahteva zibanje, vožnjo ali dojenje do spanca.</p>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="card-body">
+        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "refresh-cw", "w-6 h-6" %}</div>
+        <h3 class="card-title font-display text-lg">Pogosta nočna prebujanja</h3>
+        <p class="text-sm text-base-content/70">Otrok se ponoči večkrat zbudi in težko zaspi nazaj brez vaše pomoči.</p>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="card-body">
+        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "timer", "w-6 h-6" %}</div>
+        <h3 class="card-title font-display text-lg">Kratki dnevni spanci</h3>
+        <p class="text-sm text-base-content/70">Spanci trajajo le 30–45 minut, otrok je čez dan utrujen in siten.</p>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="card-body">
+        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "sunrise", "w-6 h-6" %}</div>
+        <h3 class="card-title font-display text-lg">Zgodnje jutranje bujenje</h3>
+        <p class="text-sm text-base-content/70">Dan se začne ob petih zjutraj, čeprav gre otrok dovolj zgodaj spat.</p>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="card-body">
+        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "hand-helping", "w-6 h-6" %}</div>
+        <h3 class="card-title font-display text-lg">Odvisnost od pomoči</h3>
+        <p class="text-sm text-base-content/70">Otrok zaspi le ob določenem pogoju – prsih, dudi ali v naročju.</p>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="card-body">
+        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "route", "w-6 h-6" %}</div>
+        <h3 class="card-title font-display text-lg">Prehodi in mejniki</h3>
+        <p class="text-sm text-base-content/70">Selitev v posteljico, opuščanje spancev, zobje ali razvojni skoki.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section">
@@ -106,6 +157,39 @@ templateEngineOverride: liquid
     </div>
   </div>
 </section>
+
+{% assign latest_posts = collections.posts | reverse %}
+{% if latest_posts.size > 0 %}
+<section class="section">
+  <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
+    <div>
+      <div class="badge badge-secondary mb-3">Blog</div>
+      <h2 class="font-display text-2xl sm:text-3xl md:text-4xl">Najnovejši nasveti</h2>
+      <p class="text-base-content/70 mt-2">Praktični članki o spanju dojenčkov in malčkov.</p>
+    </div>
+    <a href="/blog" class="btn btn-ghost btn-sm rounded-full">Vsi članki →</a>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for post in latest_posts limit: 3 %}
+      <a href="{{ post.url }}" class="card bg-base-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden group">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2 text-xs text-base-content/50 uppercase tracking-wider mb-2">
+            <time>{{ post.data.date | readableDate }}</time>
+            <span>·</span>
+            <span>{{ post.templateContent | readingTime }}</span>
+          </div>
+          <h3 class="card-title font-display text-lg leading-tight group-hover:text-primary transition-colors">{{ post.data.title }}</h3>
+          <p class="text-sm text-base-content/70 line-clamp-3 mt-2">{{ post.templateContent | strip_html | truncate: 130 }}</p>
+          <div class="mt-auto pt-4 flex items-center text-primary font-semibold text-sm gap-1">
+            Preberi članek
+            <span class="inline-block group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 <section class="section">
   <div class="card bg-secondary text-secondary-content shadow-lg">

@@ -57,13 +57,13 @@ Kjer piše "*hardcoded v `src/...`*", pomeni, da besedila ni mogoče urejati sko
 
 ### Pravno (Slovenija / EU)
 
-- [ ] **Politika zasebnosti** — obvezna zaradi obrazca za kontakt (zbiramo ime + email). Mora vsebovati:
-  - Kdo zbira osebne podatke
-  - Namen obdelave
-  - Čas hrambe
-  - Pravice uporabnika (vpogled, izbris, popravek)
-  - Kontakt za vprašanja
-  - Objavi na `/zasebnost` (Nejc doda novo stran), z linkom v footerju
+- [ ] **Politika zasebnosti** — stran **že obstaja** na `/zasebnost` (z linkom v footerju in pod kontaktnim obrazcem). Vsebuje vse obvezne razdelke (upravljavec, nameni, hramba, pravice, pritožba). **Treba je le izpolniti polja v oglatih oklepajih** v `src/zasebnost.md`:
+  - `[Ime in priimek oz. naziv dejavnosti]`
+  - `[Status, npr. samostojni podjetnik / fizična oseba]`
+  - `[Naslov]` in `[Matična / davčna številka, če obstaja]`
+  - `[npr. do zaključka komunikacije oziroma največ 12 mesecev]` (čas hrambe)
+  - `[mesec in leto]` (datum zadnje posodobitve)
+  - Priporočilo: pred objavo naj besedilo pregleda pravni strokovnjak.
 - [ ] **Pogoji poslovanja** — kako poteka rezervacija, plačilo, odpoved, vračila
 - [ ] **Podatki podjetja v footerju** — pravno zahtevani za poslovne subjekte v SI:
   - Polno ime poslovnega subjekta (s.p. ali d.o.o.)
@@ -90,13 +90,14 @@ Kjer piše "*hardcoded v `src/...`*", pomeni, da besedila ni mogoče urejati sko
   - *Hardcoded v `src/o-meni.md`*
 - [ ] **"Moj pristop"** (3 kartice na O meni) — preveri, ali ujemajo tvojo metodo
   - *Hardcoded v `src/o-meni.md`*
-- [ ] **Blog članki** — 3 generične predloge so že tam:
+- [ ] **Blog članki** — 4 generične predloge so že tam:
   - "Kako vzpostaviti dnevni ritem za boljši spanec"
   - "Pogosta nočna prebujanja: kaj je normalno in kaj ne"
   - "Prehod z dveh na eno poldansko spanje"
+  - "Dobrodošli, nasveti za mirnejši spanec" (welcome)
   
-  Preveri strokovno točnost, prilagodi ton, ali zamenjaj s svojimi članki. CMS → **Blog / Nasveti**.
-- [ ] **Welcome post** — generičen, lahko obdržiš ali zamenjaš
+  Preveri strokovno točnost, prilagodi ton, ali zamenjaj s svojimi članki. CMS → **Blog / Nasveti**. Članki so trenutno kratki — **priporočam, da jih razširiš v daljše vodnike** (uvod, koraki, "kdaj poiskati pomoč"), saj blog zdaj deluje kot baza znanja z iskalnikom.
+- [ ] **Kategorije člankov** — vsak članek ima polje **Kategorija** (CMS → Blog / Nasveti). Razvrsti vse nove članke v eno od kategorij (Osnove spanja, Nočna prebujanja, Dnevni spanci in ritem, Prehodi, Hranjenje in spanje, Starostna obdobja), da se prikažejo v pravem filtru na strani Baza znanja. Iskalnik samodejno zajame vse članke.
 
 ### Računi in integracije
 
@@ -136,8 +137,9 @@ Kjer piše "*hardcoded v `src/...`*", pomeni, da besedila ni mogoče urejati sko
 | Bio, FAQ, statistike, "Moj pristop" | *Hardcoded v `src/o-meni.md`* — uredi Nejc |
 | Storitve (naziv, opis, badge, featured, vrstni red) | CMS → **Storitve** |
 | Mnenja mamic | CMS → **Mnenja mamic** |
-| Blog članki | CMS → **Blog / Nasveti** |
-| Politika zasebnosti, pogoji, podatki podjetja | Trenutno ne obstajajo — Nejc doda nove strani |
+| Blog članki + kategorija | CMS → **Blog / Nasveti** |
+| Politika zasebnosti (besedilo / oglati oklepaji) | `src/zasebnost.md` — uredi Nejc/Eva |
+| Pogoji poslovanja, podatki podjetja | Trenutno ne obstajajo — Nejc doda nove strani |
 | Calendly embed | `src/kontakt.md` (zamenjava `mockup-window` placeholderja) |
 | Footer copyright, Instagram link | `src/_includes/base.njk` |
 

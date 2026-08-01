@@ -38,19 +38,19 @@ templateEngineOverride: liquid
       <h2 class="font-display text-2xl">Zakaj mi lahko zaupate</h2>
       <ul class="space-y-3">
         <li class="flex items-start gap-3">
-          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span class="badge badge-primary badge-lg shrink-0">{% icon "check", "w-4 h-4" %}</span>
           <span>Izkušnje s sodelovanjem z mladimi družinami</span>
         </li>
         <li class="flex items-start gap-3">
-          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span class="badge badge-primary badge-lg shrink-0">{% icon "check", "w-4 h-4" %}</span>
           <span>Pristop, ki spoštuje starševski stil in otrokove potrebe</span>
         </li>
         <li class="flex items-start gap-3">
-          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span class="badge badge-primary badge-lg shrink-0">{% icon "check", "w-4 h-4" %}</span>
           <span>Strokovno znanje iz fizioterapije in razvoja dojenčkov</span>
         </li>
         <li class="flex items-start gap-3">
-          <span class="badge badge-primary badge-lg shrink-0">✓</span>
+          <span class="badge badge-primary badge-lg shrink-0">{% icon "check", "w-4 h-4" %}</span>
           <span>Podpora po posvetu, ne ostanete sami</span>
         </li>
       </ul>
@@ -68,21 +68,21 @@ templateEngineOverride: liquid
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
-        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-2xl mb-2">🌙</div>
+        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "search", "w-6 h-6" %}</div>
         <h3 class="card-title font-display text-xl">Razumevanje pred ukrepanjem</h3>
         <p class="text-sm text-base-content/70">Najprej razumemo, zakaj se nekaj dogaja. Šele nato spreminjamo.</p>
       </div>
     </div>
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
-        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-2xl mb-2">🤍</div>
+        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "heart", "w-6 h-6" %}</div>
         <h3 class="card-title font-display text-xl">Spoštovanje vaših vrednot</h3>
         <p class="text-sm text-base-content/70">Načrt prilagodimo temu, kar se vam zdi prav, ne nasprotno.</p>
       </div>
     </div>
     <div class="card bg-base-100 shadow-sm">
       <div class="card-body">
-        <div class="w-12 h-12 rounded-full bg-primary/30 flex items-center justify-center text-2xl mb-2">🌿</div>
+        <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-2">{% icon "sprout", "w-6 h-6" %}</div>
         <h3 class="card-title font-display text-xl">Postopne spremembe</h3>
         <p class="text-sm text-base-content/70">Majhni, jasni koraki. Brez šokov za otroka in brez stresa za starše.</p>
       </div>

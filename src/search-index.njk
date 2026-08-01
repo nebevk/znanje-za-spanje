@@ -1,0 +1,18 @@
+---
+permalink: /search-index.json
+eleventyExcludeFromCollections: true
+---
+[
+{%- for post in collections.posts -%}
+{%- set body = post.templateContent | striptags -%}
+{
+"title": {{ post.data.title | dump | safe }},
+"url": {{ post.url | dump | safe }},
+"category": {{ (post.data.category | categoryLabel) | dump | safe }},
+"categorySlug": {{ (post.data.category or "") | dump | safe }},
+"date": {{ (post.data.date | readableDate) | dump | safe }},
+"excerpt": {{ (body | truncate(180)) | dump | safe }},
+"text": {{ body | dump | safe }}
+}{% if not loop.last %},{% endif %}
+{%- endfor -%}
+]

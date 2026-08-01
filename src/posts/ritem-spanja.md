@@ -1,6 +1,7 @@
 ---
 title: "Kako vzpostaviti dnevni ritem za boljši spanec"
 date: 2025-10-15
+category: ritem
 ---
 
 Predvidljiv dnevni ritem je eno najpomembnejših orodij, ki ga imamo na voljo. Otroški možgani potrebujejo ponavljajoče se signale, da prepoznajo, kdaj je čas za spanje in kdaj za budnost.

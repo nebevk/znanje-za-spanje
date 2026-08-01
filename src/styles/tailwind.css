@@ -6,6 +6,15 @@
   html, body {
     overflow-x: hidden;
   }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  /* Keep anchored sections clear of the sticky header */
+  :target {
+    scroll-margin-top: 6rem;
+  }
   body {
     @apply font-sans antialiased;
     overflow-wrap: break-word;
@@ -20,6 +29,15 @@
   /* Avoid iOS auto-zoom on input focus (triggered when font-size < 16px) */
   input, textarea, select {
     font-size: 16px;
+  }
+}
+
+@layer components {
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    @apply not-sr-only fixed top-3 left-3 z-50 btn btn-primary btn-sm shadow-lg;
   }
 }
 
