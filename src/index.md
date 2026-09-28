@@ -11,20 +11,21 @@ templateEngineOverride: liquid
     class="absolute inset-0 w-full h-full object-cover animate-fade-in"
     fetchpriority="high"
   />
-  <div class="absolute inset-0 bg-gradient-to-t from-neutral/85 via-neutral/45 to-neutral/25"></div>
+  <div class="absolute inset-0 bg-neutral/35 md:bg-neutral/20"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-neutral/95 via-neutral/70 to-neutral/45 md:from-neutral/85 md:via-neutral/45 md:to-neutral/25"></div>
   <div class="relative z-10 w-full max-w-5xl mx-auto px-4 md:px-6 pt-28 pb-16 md:py-24 text-neutral-content">
-    <p class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight animate-rise-in">
+    <p class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight animate-rise-in drop-shadow-sm">
       {{ site.brand | default: "Teta Luna" }}
     </p>
-    <h1 class="mt-5 max-w-2xl text-xl sm:text-2xl md:text-3xl font-display font-medium leading-snug text-neutral-content/95 animate-rise-in" style="animation-delay: 120ms">
+    <h1 class="mt-5 max-w-2xl text-xl sm:text-2xl md:text-3xl font-display font-medium leading-snug text-neutral-content animate-rise-in" style="animation-delay: 120ms">
       {{ home.hero_title }}
     </h1>
-    <p class="mt-4 max-w-xl text-base sm:text-lg text-neutral-content/80 animate-rise-in" style="animation-delay: 220ms">
+    <p class="mt-4 max-w-xl text-base sm:text-lg text-neutral-content/90 animate-rise-in" style="animation-delay: 220ms">
       {{ home.hero_subtitle }}
     </p>
     <div class="mt-8 flex flex-col sm:flex-row gap-3 animate-rise-in" style="animation-delay: 320ms">
-      <a href="/kontakt" class="btn btn-primary btn-lg">Rezerviraj posvet</a>
-      <a href="/storitve" class="btn btn-ghost btn-lg text-neutral-content border-neutral-content/35 hover:bg-neutral-content/10 hover:border-neutral-content/55">Poglej storitve</a>
+      <a href="/kontakt" class="btn btn-primary btn-lg w-full sm:w-auto">Rezerviraj posvet</a>
+      <a href="/storitve" class="btn btn-ghost btn-lg w-full sm:w-auto text-neutral-content border-neutral-content/45 hover:bg-neutral-content/10 hover:border-neutral-content/65">Poglej storitve</a>
     </div>
   </div>
 </section>

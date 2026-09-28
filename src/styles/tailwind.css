@@ -64,6 +64,14 @@
     @apply text-base-content font-medium;
   }
 
+  .mobile-nav-link {
+    @apply flex items-center min-h-11 px-1 text-base font-medium text-base-content/80 border-b border-base-300/70;
+  }
+  .mobile-nav-link.is-active,
+  .mobile-nav-link[aria-current="page"] {
+    @apply text-primary;
+  }
+
   .quote-mark {
     @apply font-display text-5xl leading-none text-primary/40 select-none;
   }
