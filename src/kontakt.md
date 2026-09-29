@@ -7,8 +7,8 @@ templateEngineOverride: liquid
 <section class="section">
   <div class="grid lg:grid-cols-2 gap-10">
     <div>
-      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl mb-4">Pišite mi</h1>
-      <p class="text-base-content/70 mb-8 text-base sm:text-lg">Imate vprašanje o spanju vašega otroka? Izpolnite obrazec in oglasila se vam bom v najkrajšem možnem času. Uvodni pogovor je brezplačen in brez obveznosti.</p>
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl mb-4">{{ contact.title }}</h1>
+      <p class="text-base-content/70 mb-8 text-base sm:text-lg">{{ contact.intro }}</p>
 
       <div class="card bg-base-100 shadow-md">
         <div class="card-body">
@@ -39,7 +39,7 @@ templateEngineOverride: liquid
             <button type="submit" class="btn btn-primary btn-block mt-2">Pošlji povpraševanje</button>
             <div class="flex items-start gap-2 text-xs text-base-content/60">
               <span class="text-secondary shrink-0 mt-0.5">{% icon "shield-check", "w-4 h-4" %}</span>
-              <span>Odgovorim običajno v 24–48 urah. Vaši podatki se uporabijo izključno za odgovor na vaše povpraševanje. Več v <a href="/zasebnost" class="link link-hover">politiki zasebnosti</a>.</span>
+              <span>{{ contact.form_note }} Več v <a href="/zasebnost" class="link link-hover">politiki zasebnosti</a>.</span>
             </div>
           </form>
         </div>
@@ -49,29 +49,17 @@ templateEngineOverride: liquid
     <div class="space-y-6">
       <div class="card bg-secondary/15 border border-secondary/30 shadow-sm">
         <div class="card-body">
-          <h2 class="card-title font-display">Kako poteka</h2>
+          <h2 class="card-title font-display">{{ contact.steps_title }}</h2>
           <ul class="space-y-4 mt-2">
-            <li class="flex items-start gap-3">
-              <span class="badge badge-secondary badge-lg shrink-0 font-semibold">1</span>
-              <div>
-                <div class="font-semibold">Oddate povpraševanje</div>
-                <p class="text-sm text-base-content/70">Izpolnite obrazec ali mi pišite na e-pošto.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="badge badge-secondary badge-lg shrink-0 font-semibold">2</span>
-              <div>
-                <div class="font-semibold">Brezplačen uvodni klic</div>
-                <p class="text-sm text-base-content/70">Na kratko se spoznava in pogledava, kako vam lahko pomagam.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="badge badge-secondary badge-lg shrink-0 font-semibold">3</span>
-              <div>
-                <div class="font-semibold">Načrt po meri</div>
-                <p class="text-sm text-base-content/70">Izberemo storitev in začnemo s konkretnimi koraki.</p>
-              </div>
-            </li>
+            {% for step in contact.steps %}
+              <li class="flex items-start gap-3">
+                <span class="badge badge-secondary badge-lg shrink-0 font-semibold">{{ forloop.index }}</span>
+                <div>
+                  <div class="font-semibold">{{ step.title }}</div>
+                  <p class="text-sm text-base-content/70">{{ step.text }}</p>
+                </div>
+              </li>
+            {% endfor %}
           </ul>
           <!-- Za neposredno rezervacijo lahko sem vstaviš Calendly embed (glej README). -->
         </div>
@@ -91,11 +79,11 @@ templateEngineOverride: liquid
             </li>
             <li class="flex items-center gap-3">
               <span class="w-9 h-9 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">{% icon "video", "w-4 h-4" %}</span>
-              <span>Posveti potekajo na daljavo (video klic)</span>
+              <span>{{ contact.remote_note }}</span>
             </li>
           </ul>
           <div class="divider my-2"></div>
-          <p class="text-sm text-base-content/70">Odzovem se v 24–48 urah, od ponedeljka do petka.</p>
+          <p class="text-sm text-base-content/70">{{ contact.response_note }}</p>
         </div>
       </div>
     </div>

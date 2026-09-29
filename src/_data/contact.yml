@@ -1,0 +1,13 @@
+title: "Pišite mi"
+intro: "Imate vprašanje o spanju vašega otroka? Izpolnite obrazec in oglasila se vam bom v najkrajšem možnem času. Uvodni pogovor je brezplačen in brez obveznosti."
+form_note: "Odgovorim običajno v 24–48 urah. Vaši podatki se uporabijo izključno za odgovor na vaše povpraševanje."
+steps_title: "Kako poteka"
+steps:
+  - title: "Oddate povpraševanje"
+    text: "Izpolnite obrazec ali mi pišite na e-pošto."
+  - title: "Brezplačen uvodni klic"
+    text: "Na kratko se spoznava in pogledava, kako vam lahko pomagam."
+  - title: "Načrt po meri"
+    text: "Izberemo storitev in začnemo s konkretnimi koraki."
+remote_note: "Posveti potekajo na daljavo (video klic)"
+response_note: "Odzovem se v 24–48 urah, od ponedeljka do petka."
