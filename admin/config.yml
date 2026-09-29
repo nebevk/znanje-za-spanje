@@ -31,8 +31,9 @@ collections:
     label: "Blog / Nasveti"
     folder: "src/posts"
     create: true
+    extension: md
+    format: frontmatter
     slug: "{{slug}}"
-    filter: { field: "title" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
@@ -55,8 +56,9 @@ collections:
     label: "Mnenja mamic"
     folder: "src/testimonials"
     create: true
+    extension: md
+    format: frontmatter
     slug: "{{slug}}"
-    filter: { field: "quote" }
     fields:
       - { label: "Quote", name: "quote", widget: "text" }
       - { label: "Author", name: "author", widget: "string" }
@@ -68,8 +70,9 @@ collections:
     label: "Storitve"
     folder: "src/services"
     create: true
+    extension: md
+    format: frontmatter
     slug: "{{slug}}"
-    filter: { field: "title" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Summary", name: "summary", widget: "text" }
