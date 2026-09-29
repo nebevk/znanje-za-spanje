@@ -5,133 +5,134 @@ backend:
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
-# Files allow single-instance content (homepage blocks, settings)
-files:
-  - file: "src/_data/site.yml"
-    label: "Splošno (site settings)"
-    name: "site_settings"
-    fields:
-      - { label: "Brand name", name: "brand", widget: "string", default: "Teta Luna" }
-      - { label: "Slogan / tagline", name: "tagline", widget: "string", default: "Znanje za spanje", hint: "Prikazan pod glavnim imenom v navigaciji." }
-      - { label: "Contact email", name: "email", widget: "string", default: "eva@example.com" }
-      - { label: "Instagram", name: "instagram", widget: "string", default: "@znanje_za_spanje" }
-      - { label: "Spletni naslov (URL)", name: "url", widget: "string", default: "https://znanjezaspanje.netlify.app", hint: "Polni naslov strani, uporabljen za predogled pri deljenju povezav (Facebook, ...)." }
-      - { label: "Logo", name: "logo", widget: "image", required: false, hint: "Logotip v glavi. Najbolje SVG ali PNG s prozornim ozadjem." }
-      - { label: "Logo v nogi", name: "logo_footer", widget: "image", required: false, hint: "Svetlejša različica logotipa za temno nogo." }
-      - { label: "Primary barva", name: "color_primary", widget: "color", default: "#1A5C4A", enableAlpha: false, hint: "Gumbi in poudarki. Velja po objavi (Netlify znova zgradi stran)." }
-      - { label: "Accent barva", name: "color_accent", widget: "color", default: "#C9B896", enableAlpha: false }
-      - { label: "Secondary barva", name: "color_secondary", widget: "color", default: "#2C3540", enableAlpha: false, hint: "Temnejši gumbi in oznake." }
-      - { label: "Gumb v meniju — besedilo", name: "nav_cta_label", widget: "string", default: "Rezerviraj posvet" }
-      - { label: "Gumb v meniju — povezava", name: "nav_cta_href", widget: "string", default: "/kontakt" }
-      - { label: "Besedilo v nogi", name: "footer_text", widget: "text" }
-      - label: "Meni v glavi"
-        name: nav
-        widget: list
-        summary: "{{label}} → {{href}}"
-        hint: "Povezave v zgornjem meniju. Gumb za rezervacijo je ločen."
-        fields:
-          - { label: "Besedilo", name: label, widget: string }
-          - { label: "Povezava", name: href, widget: string, hint: "npr. /o-meni ali https://..." }
-      - label: "Meni v nogi"
-        name: footer_nav
-        widget: list
-        summary: "{{label}} → {{href}}"
-        fields:
-          - { label: "Besedilo", name: label, widget: string }
-          - { label: "Povezava", name: href, widget: string }
-
-  - file: "src/_data/home.yml"
-    label: "Domov - vsebina"
-    name: "home"
-    fields:
-      - { label: "Hero title", name: "hero_title", widget: "string", default: "Pomagam družinam do mirnih noči in spočite mame." }
-      - { label: "Hero subtitle", name: "hero_subtitle", widget: "text", default: "Svetovanje za spanje dojenčkov in malčkov, prilagojeno vaši družini." }
-      - { label: "Hero image", name: "hero_image", widget: "image", required: false, hint: "Slika v ozadju hero sekcije na naslovni strani. Uporabi širinski (landscape) format, vsaj 1600×900 px. Pokončne slike ne delujejo dobro." }
-      - { label: "Komu pomagam — naslov", name: "komu_title", widget: "string" }
-      - { label: "Komu pomagam (paragraph)", name: "komu", widget: "text", default: "Če vaš dojenček težko zaspi..." }
-      - { label: "Težave — naslov", name: "problems_title", widget: "string" }
-      - { label: "Težave — uvod", name: "problems_lead", widget: "text" }
-      - label: "Težave"
-        name: problems
-        widget: list
-        summary: "{{title}}"
-        fields:
-          - { label: "Naslov", name: title, widget: string }
-          - { label: "Besedilo", name: text, widget: text }
-      - { label: "Koraki — naslov", name: "steps_title", widget: "string" }
-      - { label: "Koraki — uvod", name: "steps_lead", widget: "text" }
-      - label: "Koraki (kako poteka)"
-        name: steps
-        widget: list
-        summary: "{{title}}"
-        fields:
-          - { label: "Naslov", name: title, widget: string }
-          - { label: "Besedilo", name: text, widget: text }
-      - { label: "Eva — naslov", name: "eva_title", widget: "string" }
-      - { label: "Eva — kratek opis", name: "eva_text", widget: "text" }
-      - { label: "Eva — gumb", name: "eva_link_label", widget: "string" }
-      - { label: "Blog — naslov", name: "posts_title", widget: "string" }
-      - { label: "Blog — uvod", name: "posts_lead", widget: "text" }
-      - { label: "Zaključni poziv — naslov", name: "cta_title", widget: "string" }
-      - { label: "Zaključni poziv — besedilo", name: "cta_text", widget: "text" }
-
-  - file: "src/_data/about.yml"
-    label: "O meni"
-    name: "about"
-    fields:
-      - { label: "Ime", name: "name", widget: "string" }
-      - { label: "Fotografija", name: "photo", widget: "image", required: false, hint: "Ista slika na naslovni strani in na strani O meni." }
-      - { label: "Opis fotografije", name: "photo_alt", widget: "string", required: false }
-      - { label: "Bio odstavki", name: "bio", widget: "list", hint: "Vsak odstavek posebej." }
-      - { label: "Zaupanje — naslov", name: "trust_title", widget: "string" }
-      - { label: "Zaupanje — točke", name: "trust", widget: "list" }
-      - label: "Številke"
-        name: stats
-        widget: list
-        summary: "{{value}} {{label}}"
-        hint: "Če številke niso resnične, jih izbriši ali popravi."
-        fields:
-          - { label: "Opis", name: label, widget: string }
-          - { label: "Vrednost", name: value, widget: string }
-      - { label: "Pristop — naslov", name: "approach_title", widget: "string" }
-      - { label: "Pristop — uvod", name: "approach_lead", widget: "text" }
-      - label: "Pristop"
-        name: approach
-        widget: list
-        summary: "{{title}}"
-        fields:
-          - { label: "Naslov", name: title, widget: string }
-          - { label: "Besedilo", name: text, widget: text }
-      - { label: "FAQ — naslov", name: "faq_title", widget: "string" }
-      - label: "Pogosta vprašanja"
-        name: faq
-        widget: list
-        summary: "{{question}}"
-        fields:
-          - { label: "Vprašanje", name: question, widget: string }
-          - { label: "Odgovor", name: answer, widget: text }
-      - { label: "Poziv — naslov", name: "cta_title", widget: "string" }
-      - { label: "Poziv — besedilo", name: "cta_text", widget: "text" }
-
-  - file: "src/_data/contact.yml"
-    label: "Kontakt - vsebina"
-    name: "contact"
-    fields:
-      - { label: "Naslov", name: "title", widget: "string" }
-      - { label: "Uvod", name: "intro", widget: "text" }
-      - { label: "Opomba pod obrazcem", name: "form_note", widget: "text", hint: "Povezava na politiko zasebnosti se doda samodejno." }
-      - { label: "Koraki — naslov", name: "steps_title", widget: "string" }
-      - label: "Koraki"
-        name: steps
-        widget: list
-        summary: "{{title}}"
-        fields:
-          - { label: "Naslov", name: title, widget: string }
-          - { label: "Besedilo", name: text, widget: text }
-      - { label: "Opomba o videoklicu", name: "remote_note", widget: "string" }
-      - { label: "Odzivni čas", name: "response_note", widget: "string" }
-
 collections:
+  - label: "Strani in nastavitve"
+    name: "site_pages"
+    files:
+      - file: "src/_data/site.yml"
+        label: "Splošno (site settings)"
+        name: "site_settings"
+        fields:
+          - { label: "Brand name", name: "brand", widget: "string", default: "Teta Luna" }
+          - { label: "Slogan / tagline", name: "tagline", widget: "string", default: "Znanje za spanje", hint: "Prikazan pod glavnim imenom v navigaciji." }
+          - { label: "Contact email", name: "email", widget: "string", default: "eva@example.com" }
+          - { label: "Instagram", name: "instagram", widget: "string", default: "@znanje_za_spanje" }
+          - { label: "Spletni naslov (URL)", name: "url", widget: "string", default: "https://znanjezaspanje.netlify.app", hint: "Polni naslov strani, uporabljen za predogled pri deljenju povezav (Facebook, ...)." }
+          - { label: "Logo", name: "logo", widget: "image", required: false, hint: "Logotip v glavi. Najbolje SVG ali PNG s prozornim ozadjem." }
+          - { label: "Logo v nogi", name: "logo_footer", widget: "image", required: false, hint: "Svetlejša različica logotipa za temno nogo." }
+          - { label: "Primary barva", name: "color_primary", widget: "color", default: "#1A5C4A", enableAlpha: false, hint: "Gumbi in poudarki. Velja po objavi (Netlify znova zgradi stran)." }
+          - { label: "Accent barva", name: "color_accent", widget: "color", default: "#C9B896", enableAlpha: false }
+          - { label: "Secondary barva", name: "color_secondary", widget: "color", default: "#2C3540", enableAlpha: false, hint: "Temnejši gumbi in oznake." }
+          - { label: "Gumb v meniju — besedilo", name: "nav_cta_label", widget: "string", default: "Rezerviraj posvet" }
+          - { label: "Gumb v meniju — povezava", name: "nav_cta_href", widget: "string", default: "/kontakt" }
+          - { label: "Besedilo v nogi", name: "footer_text", widget: "text" }
+          - label: "Meni v glavi"
+            name: nav
+            widget: list
+            summary: "{{label}} → {{href}}"
+            hint: "Povezave v zgornjem meniju. Gumb za rezervacijo je ločen."
+            fields:
+              - { label: "Besedilo", name: label, widget: string }
+              - { label: "Povezava", name: href, widget: string, hint: "npr. /o-meni ali https://..." }
+          - label: "Meni v nogi"
+            name: footer_nav
+            widget: list
+            summary: "{{label}} → {{href}}"
+            fields:
+              - { label: "Besedilo", name: label, widget: string }
+              - { label: "Povezava", name: href, widget: string }
+
+      - file: "src/_data/home.yml"
+        label: "Domov - vsebina"
+        name: "home"
+        fields:
+          - { label: "Hero title", name: "hero_title", widget: "string", default: "Pomagam družinam do mirnih noči in spočite mame." }
+          - { label: "Hero subtitle", name: "hero_subtitle", widget: "text", default: "Svetovanje za spanje dojenčkov in malčkov, prilagojeno vaši družini." }
+          - { label: "Hero image", name: "hero_image", widget: "image", required: false, hint: "Slika v ozadju hero sekcije na naslovni strani. Uporabi širinski (landscape) format, vsaj 1600×900 px. Pokončne slike ne delujejo dobro." }
+          - { label: "Komu pomagam — naslov", name: "komu_title", widget: "string" }
+          - { label: "Komu pomagam (paragraph)", name: "komu", widget: "text", default: "Če vaš dojenček težko zaspi..." }
+          - { label: "Težave — naslov", name: "problems_title", widget: "string" }
+          - { label: "Težave — uvod", name: "problems_lead", widget: "text" }
+          - label: "Težave"
+            name: problems
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { label: "Naslov", name: title, widget: string }
+              - { label: "Besedilo", name: text, widget: text }
+          - { label: "Koraki — naslov", name: "steps_title", widget: "string" }
+          - { label: "Koraki — uvod", name: "steps_lead", widget: "text" }
+          - label: "Koraki (kako poteka)"
+            name: steps
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { label: "Naslov", name: title, widget: string }
+              - { label: "Besedilo", name: text, widget: text }
+          - { label: "Eva — naslov", name: "eva_title", widget: "string" }
+          - { label: "Eva — kratek opis", name: "eva_text", widget: "text" }
+          - { label: "Eva — gumb", name: "eva_link_label", widget: "string" }
+          - { label: "Blog — naslov", name: "posts_title", widget: "string" }
+          - { label: "Blog — uvod", name: "posts_lead", widget: "text" }
+          - { label: "Zaključni poziv — naslov", name: "cta_title", widget: "string" }
+          - { label: "Zaključni poziv — besedilo", name: "cta_text", widget: "text" }
+
+      - file: "src/_data/about.yml"
+        label: "O meni"
+        name: "about"
+        fields:
+          - { label: "Ime", name: "name", widget: "string" }
+          - { label: "Fotografija", name: "photo", widget: "image", required: false, hint: "Ista slika na naslovni strani in na strani O meni." }
+          - { label: "Opis fotografije", name: "photo_alt", widget: "string", required: false }
+          - { label: "Bio odstavki", name: "bio", widget: "list", hint: "Vsak odstavek posebej." }
+          - { label: "Zaupanje — naslov", name: "trust_title", widget: "string" }
+          - { label: "Zaupanje — točke", name: "trust", widget: "list" }
+          - label: "Številke"
+            name: stats
+            widget: list
+            summary: "{{value}} {{label}}"
+            hint: "Če številke niso resnične, jih izbriši ali popravi."
+            fields:
+              - { label: "Opis", name: label, widget: string }
+              - { label: "Vrednost", name: value, widget: string }
+          - { label: "Pristop — naslov", name: "approach_title", widget: "string" }
+          - { label: "Pristop — uvod", name: "approach_lead", widget: "text" }
+          - label: "Pristop"
+            name: approach
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { label: "Naslov", name: title, widget: string }
+              - { label: "Besedilo", name: text, widget: text }
+          - { label: "FAQ — naslov", name: "faq_title", widget: "string" }
+          - label: "Pogosta vprašanja"
+            name: faq
+            widget: list
+            summary: "{{question}}"
+            fields:
+              - { label: "Vprašanje", name: question, widget: string }
+              - { label: "Odgovor", name: answer, widget: text }
+          - { label: "Poziv — naslov", name: "cta_title", widget: "string" }
+          - { label: "Poziv — besedilo", name: "cta_text", widget: "text" }
+
+      - file: "src/_data/contact.yml"
+        label: "Kontakt - vsebina"
+        name: "contact"
+        fields:
+          - { label: "Naslov", name: "title", widget: "string" }
+          - { label: "Uvod", name: "intro", widget: "text" }
+          - { label: "Opomba pod obrazcem", name: "form_note", widget: "text", hint: "Povezava na politiko zasebnosti se doda samodejno." }
+          - { label: "Koraki — naslov", name: "steps_title", widget: "string" }
+          - label: "Koraki"
+            name: steps
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { label: "Naslov", name: title, widget: string }
+              - { label: "Besedilo", name: text, widget: text }
+          - { label: "Opomba o videoklicu", name: "remote_note", widget: "string" }
+          - { label: "Odzivni čas", name: "response_note", widget: "string" }
+
   - name: "posts"
     label: "Blog / Nasveti"
     folder: "src/posts"
