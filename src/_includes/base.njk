@@ -10,7 +10,7 @@
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ pageDesc }}" />
   <link rel="canonical" href="{{ siteUrl }}{{ page.url }}" />
-  <meta name="theme-color" content="#1A5C4A" />
+  <meta name="theme-color" content="{{ site.color_primary or '#1A5C4A' }}" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ site.brand or 'Teta Luna' }}" />
@@ -39,7 +39,7 @@
       <a href="/" class="flex items-center gap-3 min-w-0">
         <div class="avatar shrink-0">
           <div class="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14">
-            <img src="/assets/images/logo_vector.svg" alt="Logo {{ site.brand or 'Teta Luna' }}" width="56" height="56" />
+            <img src="{{ site.logo or '/assets/images/logo_vector.svg' }}" alt="Logo {{ site.brand or 'Teta Luna' }}" width="56" height="56" />
           </div>
         </div>
         <div class="leading-tight min-w-0">
@@ -48,11 +48,11 @@
         </div>
       </a>
       <nav class="hidden md:flex items-center gap-1">
-        <a href="/" class="nav-link"{% if page.url == '/' %} aria-current="page"{% endif %}>Domov</a>
-        <a href="/o-meni" class="nav-link"{% if page.url | startsWith('/o-meni') %} aria-current="page"{% endif %}>O meni</a>
-        <a href="/storitve" class="nav-link"{% if page.url | startsWith('/storitve') %} aria-current="page"{% endif %}>Storitve</a>
-        <a href="/blog" class="nav-link"{% if page.url | startsWith('/blog') %} aria-current="page"{% endif %}>Blog</a>
-        <a href="/kontakt" class="btn btn-primary btn-sm ml-2">Rezerviraj posvet</a>
+        {% for item in site.nav %}
+          {% set current = (item.href == '/' and page.url == '/') or (item.href != '/' and (page.url | startsWith(item.href))) %}
+          <a href="{{ item.href }}" class="nav-link"{% if current %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+        <a href="{{ site.nav_cta_href or '/kontakt' }}" class="btn btn-primary btn-sm ml-2">{{ site.nav_cta_label or "Rezerviraj posvet" }}</a>
       </nav>
       <label for="mobile-nav" class="btn btn-ghost btn-square min-h-11 min-w-11 md:hidden" aria-label="Meni">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
@@ -60,11 +60,11 @@
     </div>
     <nav class="hidden peer-checked:block md:!hidden border-t border-base-300 bg-base-100" aria-label="Mobilni meni">
       <div class="max-w-5xl mx-auto px-4 py-2 flex flex-col">
-        <a href="/" class="mobile-nav-link{% if page.url == '/' %} is-active{% endif %}"{% if page.url == '/' %} aria-current="page"{% endif %}>Domov</a>
-        <a href="/o-meni" class="mobile-nav-link{% if page.url | startsWith('/o-meni') %} is-active{% endif %}"{% if page.url | startsWith('/o-meni') %} aria-current="page"{% endif %}>O meni</a>
-        <a href="/storitve" class="mobile-nav-link{% if page.url | startsWith('/storitve') %} is-active{% endif %}"{% if page.url | startsWith('/storitve') %} aria-current="page"{% endif %}>Storitve</a>
-        <a href="/blog" class="mobile-nav-link{% if page.url | startsWith('/blog') %} is-active{% endif %}"{% if page.url | startsWith('/blog') %} aria-current="page"{% endif %}>Blog</a>
-        <a href="/kontakt" class="btn btn-primary w-full mt-3 mb-2 min-h-11">Rezerviraj posvet</a>
+        {% for item in site.nav %}
+          {% set current = (item.href == '/' and page.url == '/') or (item.href != '/' and (page.url | startsWith(item.href))) %}
+          <a href="{{ item.href }}" class="mobile-nav-link{% if current %} is-active{% endif %}"{% if current %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+        <a href="{{ site.nav_cta_href or '/kontakt' }}" class="btn btn-primary w-full mt-3 mb-2 min-h-11">{{ site.nav_cta_label or "Rezerviraj posvet" }}</a>
       </div>
     </nav>
   </header>
@@ -79,11 +79,11 @@
       <div class="md:col-span-2 space-y-4">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 shrink-0">
-            <img src="/assets/images/logo_vector_white.svg" alt="Logo {{ site.brand or 'Teta Luna' }}" width="40" height="40" loading="lazy" />
+            <img src="{{ site.logo_footer or '/assets/images/logo_vector_white.svg' }}" alt="Logo {{ site.brand or 'Teta Luna' }}" width="40" height="40" loading="lazy" />
           </div>
           <span class="font-display text-xl font-semibold">{{ site.brand or "Teta Luna" }}</span>
         </div>
-        <p class="text-sm opacity-80 max-w-sm leading-relaxed">Svetovanje za spanje dojenčkov in malčkov. Nežno, postopno in brez stresa. Eva, fizioterapevtka in svetovalka za spanje.</p>
+        <p class="text-sm opacity-80 max-w-sm leading-relaxed">{{ site.footer_text or "Svetovanje za spanje dojenčkov in malčkov. Nežno, postopno in brez stresa. Eva, fizioterapevtka in svetovalka za spanje." }}</p>
         <div class="flex gap-3 pt-1">
           <a href="https://instagram.com/{{ site.instagram | replace('@', '') }}" target="_blank" rel="noopener" aria-label="Instagram" class="opacity-80 hover:opacity-100 transition-opacity">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -104,12 +104,9 @@
       <div>
         <h4 class="font-display font-semibold mb-3">Strani</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="/" class="opacity-80 hover:opacity-100 hover:underline">Domov</a></li>
-          <li><a href="/o-meni" class="opacity-80 hover:opacity-100 hover:underline">O meni</a></li>
-          <li><a href="/storitve" class="opacity-80 hover:opacity-100 hover:underline">Storitve</a></li>
-          <li><a href="/blog" class="opacity-80 hover:opacity-100 hover:underline">Baza znanja</a></li>
-          <li><a href="/kontakt" class="opacity-80 hover:opacity-100 hover:underline">Kontakt</a></li>
-          <li><a href="/zasebnost" class="opacity-80 hover:opacity-100 hover:underline">Zasebnost</a></li>
+          {% for item in site.footer_nav %}
+            <li><a href="{{ item.href }}" class="opacity-80 hover:opacity-100 hover:underline">{{ item.label }}</a></li>
+          {% endfor %}
         </ul>
       </div>
 
@@ -118,7 +115,7 @@
         <ul class="space-y-2 text-sm">
           <li><a href="mailto:{{ site.email }}" class="opacity-80 hover:opacity-100 hover:underline break-all">{{ site.email }}</a></li>
           <li><a href="https://instagram.com/{{ site.instagram | replace('@', '') }}" target="_blank" rel="noopener" class="opacity-80 hover:opacity-100 hover:underline">{{ site.instagram }}</a></li>
-          <li class="pt-2"><a href="/kontakt" class="btn btn-secondary btn-sm">Rezerviraj posvet</a></li>
+          <li class="pt-2"><a href="{{ site.nav_cta_href or '/kontakt' }}" class="btn btn-secondary btn-sm">{{ site.nav_cta_label or "Rezerviraj posvet" }}</a></li>
         </ul>
       </div>
     </div>

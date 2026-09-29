@@ -3,3 +3,33 @@ tagline: "Znanje za spanje"
 email: "eva@znanjezaspanje.si"
 instagram: "@znanje_za_spanje"
 url: "https://znanjezaspanje.netlify.app"
+logo: "/assets/images/logo_vector.svg"
+logo_footer: "/assets/images/logo_vector_white.svg"
+color_primary: "#1A5C4A"
+color_accent: "#C9B896"
+color_secondary: "#2C3540"
+nav_cta_label: "Rezerviraj posvet"
+nav_cta_href: "/kontakt"
+footer_text: "Svetovanje za spanje dojenčkov in malčkov. Nežno, postopno in brez stresa. Eva, fizioterapevtka in svetovalka za spanje."
+nav:
+  - label: Domov
+    href: /
+  - label: O meni
+    href: /o-meni
+  - label: Storitve
+    href: /storitve
+  - label: Blog
+    href: /blog
+footer_nav:
+  - label: Domov
+    href: /
+  - label: O meni
+    href: /o-meni
+  - label: Storitve
+    href: /storitve
+  - label: Baza znanja
+    href: /blog
+  - label: Kontakt
+    href: /kontakt
+  - label: Zasebnost
+    href: /zasebnost

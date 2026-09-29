@@ -16,6 +16,29 @@ files:
       - { label: "Contact email", name: "email", widget: "string", default: "eva@example.com" }
       - { label: "Instagram", name: "instagram", widget: "string", default: "@znanje_za_spanje" }
       - { label: "Spletni naslov (URL)", name: "url", widget: "string", default: "https://znanjezaspanje.netlify.app", hint: "Polni naslov strani, uporabljen za predogled pri deljenju povezav (Facebook, ...)." }
+      - { label: "Logo", name: "logo", widget: "image", required: false, hint: "Logotip v glavi. Najbolje SVG ali PNG s prozornim ozadjem." }
+      - { label: "Logo v nogi", name: "logo_footer", widget: "image", required: false, hint: "Svetlejša različica logotipa za temno nogo." }
+      - { label: "Primary barva", name: "color_primary", widget: "color", default: "#1A5C4A", enableAlpha: false, hint: "Gumbi in poudarki. Velja po objavi (Netlify znova zgradi stran)." }
+      - { label: "Accent barva", name: "color_accent", widget: "color", default: "#C9B896", enableAlpha: false }
+      - { label: "Secondary barva", name: "color_secondary", widget: "color", default: "#2C3540", enableAlpha: false, hint: "Temnejši gumbi in oznake." }
+      - { label: "Gumb v meniju — besedilo", name: "nav_cta_label", widget: "string", default: "Rezerviraj posvet" }
+      - { label: "Gumb v meniju — povezava", name: "nav_cta_href", widget: "string", default: "/kontakt" }
+      - { label: "Besedilo v nogi", name: "footer_text", widget: "text" }
+      - label: "Meni v glavi"
+        name: nav
+        widget: list
+        summary: "{{label}} → {{href}}"
+        hint: "Povezave v zgornjem meniju. Gumb za rezervacijo je ločen."
+        fields:
+          - { label: "Besedilo", name: label, widget: string }
+          - { label: "Povezava", name: href, widget: string, hint: "npr. /o-meni ali https://..." }
+      - label: "Meni v nogi"
+        name: footer_nav
+        widget: list
+        summary: "{{label}} → {{href}}"
+        fields:
+          - { label: "Besedilo", name: label, widget: string }
+          - { label: "Povezava", name: href, widget: string }
 
   - file: "src/_data/home.yml"
     label: "Domov - vsebina"

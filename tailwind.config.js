@@ -1,3 +1,18 @@
+const fs = require("fs");
+const yaml = require("js-yaml");
+
+function hex(value, fallback) {
+  const v = String(value || "").trim();
+  return /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(v) ? v : fallback;
+}
+
+let site = {};
+try {
+  site = yaml.load(fs.readFileSync("./src/_data/site.yml", "utf8")) || {};
+} catch (err) {
+  site = {};
+}
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,njk,md}"],
@@ -28,11 +43,11 @@ module.exports = {
     themes: [
       {
         zzs: {
-          "primary": "#1A5C4A",
+          "primary": hex(site.color_primary, "#1A5C4A"),
           "primary-content": "#F4F7F5",
-          "secondary": "#2C3540",
+          "secondary": hex(site.color_secondary, "#2C3540"),
           "secondary-content": "#E8EDF0",
-          "accent": "#C9B896",
+          "accent": hex(site.color_accent, "#C9B896"),
           "accent-content": "#1A1F26",
           "neutral": "#1A1F26",
           "neutral-content": "#E8EDF0",
